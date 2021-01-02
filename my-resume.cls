@@ -69,6 +69,7 @@
 
 \newlength\highlightwidth
 \newlength\headerheight
+\newlength{\infoheight}
 \newlength\marginleft
 \newlength\marginright
 \newlength\margintop
@@ -76,7 +77,8 @@
 
 % default sizes, margins, ...
 \setlength\highlightwidth{8cm}
-\setlength\headerheight{6cm}
+\setlength\headerheight{5.5cm}
+\setlength\infoheight{2.5cm}
 \setlength\marginleft{1cm}
 \setlength\marginright{\marginleft}
 \setlength\margintop{1cm}
@@ -237,8 +239,41 @@
 % variables for name, tag line and photo setup
 \newcommand{\firstname}[1]{\def\@firstname{#1}}
 \newcommand{\lastname}[1]{\def\@lastname{#1}}
+
+\newcommand{\address}[1]{\def\@address{#1}}
+\newcommand{\addressfield}[1]{#1}
+
+\newcommand{\phone}[1]{\def\@phone{#1}}
+\newcommand{\phonefield}[1]{\infofield{\faPhone}{#1}}
+
+\newcommand{\email}[1]{\def\@email{#1}}
+\newcommand{\emailfield}[1]{\infofield{\faEnvelope}{\href{mailto:#1}{#1}}}
+
+
+\newcommand{\linkedin}[2]{\def\@linkedinlink{#2}\def\@linkedinname{#1}}
+\newcommand{\linkedinfield}[2]{\infofield{\faLinkedin}{\href{#2}{#1}}}
+
+\newcommand{\github}[2]{\def\@githublink{#2}\def\@githubname{#1}}
+\newcommand{\githubfield}[2]{\infofield{\faGithub}{\href{#2}{#1}}}
+
+\newcommand{\googlescholar}[2]{\def\@googlescholarname{#1}\def\@googlescholarlink{#2}}
+\newcommand{\googlescholarfield}[2]{\infofield{\aiGoogleScholar}{\href{#2}{#1}}}
+
 \newcommand{\tagline}[1]{\def\@tagline{#1}}
 \newcommand{\photo}[3][]{\def\@photo{#2}\def\@photodiameter{#3}\def\@photoformat{#1}}
+
+
+
+% variables for info
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\infoline}[1]{\def\@infoline{#1}}
+\newcommand{\vinfofield}[2]{\mbox{\makebox[5mm]{\textcolor{accent}{\normalsize #1}}\hspace{0.5em}#2}\vspace{0.2em}\newline}
+\newcommand{\infofield}[2]{\mbox{\makebox[5mm]{\textcolor{accent}{\normalsize #1}}\hspace{0.5em}#2}}
+
+\newcommand{\location}[1]{\infofield{\faMapMarker}{#1}}
+\newcommand{\homepage}[2]{\infofield{\faHome}{\href{#2}{#1}}}
+
 
 % try to align the top of the written out name with the top of the photo
 % it is impossible to get the actual height of a line to determine the offset between line top and charachter top
@@ -259,22 +294,31 @@
                 \vspace{0cm}%
             }{}
             % print the header text
-                \begin{minipage}[t][2em]{\linewidth}
-                    {\Huge\color{headerfontcolor}\bfseries \@firstname \space \@lastname\par}
+                \begin{minipage}[t][\dimexpr \infoheight]{\linewidth}
+                    {\Huge\color{headerfontcolor}\bfseries \@firstname \space \@lastname\par}\vspace{0.2em}
+                    
+                    {\large\color{headerfontcolor}\addressfield{\@address}\par}\vspace{0.2em}
+
+                    {\color{headerfontcolor}\phonefield{\@phone}\hspace{0.15cm} | \hspace{0.15cm}\emailfield{\@email}\par}\vspace{0.2em}
+                    {\color{headerfontcolor}\linkedinfield{\@linkedinname}{\@linkedinlink}\hspace{0.15cm} | \hspace{0.15cm}\githubfield{\@githubname}{\@githublink}\hspace{0.15cm} | \hspace{0.15cm}\googlescholarfield{\@googlescholarname}{\@googlescholarlink}\par}\vspace{0.2em}
+                    %{\color{headerfontcolor}\@infoline\par}
                 \end{minipage}%
                 \vfill%
-                \begin{minipage}[b][\dimexpr \headerheight-2em-\marginbottom]{\linewidth}%
+                \begin{minipage}[b][\dimexpr \headerheight-\infoheight-\marginbottom]{\linewidth}%
                     {\large\bfseries\color{headerfontcolor}\@tagline\par}
                 \end{minipage}%
         % finish the minipages for text and photo if photo is given
         \ifdef{\@photodiameter}{%
             \end{minipage}\hfil%
-            \begin{minipage}[t]{\@photodiameter}                                % to top align name and photo add [t] here
+            \begin{minipage}{1.0em}
+            \end{minipage}
+            \begin{minipage}[t]{\@photodiameter - 1.0em}% + 0.5em}                                % to top align name and photo add [t] here
                 \vspace{0cm}
-    			% format as square or round
+                % format as square or round
+                %\hspace{0.5em}
     			\ifthenelse{\equal{\@photoformat}{square}}{%
     			    \includegraphics[width=\linewidth]{\@photo}%
-    			}{%
+                }{%
     			    \tikz\path[fill overzoom image={\@photo}]circle[radius=0.5\linewidth];
     			}
     		\end{minipage}%
@@ -290,21 +334,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BODY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% contact info
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\infofield}[2]{\mbox{\makebox[5mm]{\textcolor{accent}{\normalsize #1}}\hspace{0.5em}#2}\vspace{0.2em}\newline}
-\newcommand{\email}[1]{\infofield{\faEnvelope}{\href{mailto:#1}{#1}}}
-\newcommand{\address}[1]{\infofield{\faAt}{#1}}
-\newcommand{\location}[1]{\infofield{\faMapMarker}{#1}}
-\newcommand{\phone}[1]{\infofield{\faPhone}{#1}}
-\newcommand{\homepage}[2]{\infofield{\faHome}{\href{#2}{#1}}}
-\newcommand{\linkedin}[2]{\infofield{\faLinkedin}{\href{#2}{#1}}}
-\newcommand{\github}[2]{\infofield{\faGithub}{\href{#2}{#1}}}
-\newcommand{\orcid}[2]{\infofield{\aiOrcid}{\href{#2}{#1}}}
-\newcommand{\ads}[2]{\infofield{\aiADS}{\href{#2}{#1}}}
-\newcommand{\googlescholar}[2]{\infofield{\aiGoogleScholar}{\href{#2}{#1}}}
 
 
 % highlight bar

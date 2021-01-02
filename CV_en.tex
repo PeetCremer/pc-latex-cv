@@ -1,5 +1,5 @@
-\documentclass[%singlesided,
-               doublesided,
+\documentclass[singlesided,
+               %doublesided,
                paper=a4,
                fontsize=10pt
               ]{my-resume}
@@ -9,7 +9,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setlength\highlightwidth{8cm}
-\setlength\headerheight{4cm}            % note that margintop gets added to this value, i.e. the header bar is 5cm
+%\setlength\headerheight{4cm}            % note that margintop gets added to this value, i.e. the header bar is 5cm
 \setlength\marginleft{1cm}
 \setlength\marginright{\marginleft}      % needs to be 1.5 times to be actually equal. why?
 \setlength\margintop{1cm}
@@ -39,7 +39,7 @@
 
 
 \usepackage{hyperref}
-\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\hypersetup{colorlinks=true,linkcolor=awesome-skyblue,urlcolor=awesome-skyblue}
 
 
 
@@ -50,10 +50,20 @@
 
 \begin{document}
 
-\firstname{Dr. Peet}
-\lastname{Cremer}
-\tagline{Amazing tag line that makes HR managers want to hire you immediately.\\The tag line is aligned with the bottom of the picture to the right, so if you have\\multiple lines it fills the space to your name from the bottom. You might want to\\introduce manual line breaks to make this look nicer then simply filling up the lines.}
-\photo[round]{picture4.jpg}{\dimexpr \headerheight-\marginbottom}   % make photo exactly match the header with margintop/marginright/marginbottom as margin
+\firstname{Dr. Peet}\lastname{Cremer}
+
+\address{Weseler Str. 22, 40239 Düsseldorf, Germany}
+\phone{+49 151 64548894}
+\email{peet.cremer@gmail.com}
+\linkedin{Peet Cremer}{https://www.linkedin.com/in/peet-cremer-5286601a6/}
+\github{@PeetCremer}{https://github.com/PeetCremer}
+\googlescholar{Publication list}{https://scholar.google.com/citations?hl=de&user=MnU8ZxwAAAAJ}
+
+
+\tagline{I am an AI Software Engineer and Data-Scientist with a background in Statistical Physics and Computer Science. 
+I combine a strong mathematical background with advanced programming skills (Python, C++, Rust) and knowledge of Data Science frameworks (TensorFlow, PyTorch, scikit-learn). 
+I have an outgoing, communicative personality, a hands-on attitude, and I am experienced in agile leadership of small teams.}
+\photo[round]{picture4.jpg}{\dimexpr \headerheight-\marginbottom-1em}   % make photo exactly match the header with margintop/marginright/marginbottom as margin
 
 \makeheader
 
@@ -61,13 +71,14 @@
 
     \section{Contact}
     
-    \email{peet.cremer@gmail.com}
-    \phone{+49 151 64548894}
-    \location{Weseler Str. 22, 40239 Düsseldorf}
-    \vspace{0.5em}
-    \linkedin{Peet Cremer}{https://www.linkedin.com/in/peet-cremer-5286601a6/}
-    \googlescholar{Publication list}{https://scholar.google.com/citations?hl=de&user=MnU8ZxwAAAAJ}
-    \github{@PeetCremer}{https://github.com/PeetCremer}
+    %\email{peet.cremer@gmail.com}
+    %\phone{+49 151 64548894}
+    
+    %\location{Weseler Str. 22, 40239 Düsseldorf}
+    %\vspace{0.5em}
+    %\linkedin{Peet Cremer}{https://www.linkedin.com/in/peet-cremer-5286601a6/}
+    %\googlescholar{Publication list}{https://scholar.google.com/citations?hl=de&user=MnU8ZxwAAAAJ}
+    %\github{@PeetCremer}{https://github.com/PeetCremer}
     %\homepage{peetcremer.com}{https://www.peetcremer.de}
     %\orcid{0000-0001-6040-6596}{https://orcid.org/0000-0001-6040-6596}
     %\ads{NASA/ADS publication list}{https://ui.adsabs.harvard.edu/search/fq=\%7B!type\%3Daqp\%20v\%3D\%24fq\_database\%7D&fq\_database=database\%3A\%20astronomy&p\_=0&q=pubdate\%3A\%5B2016-01\%20TO\%209999-12\%5D\%20author\%3A(\%22Krieger\%2C\%20Nico\%22)&sort=date\%20desc\%2C\%20bibcode\%20desc}
