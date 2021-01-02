@@ -77,7 +77,7 @@
 
 % default sizes, margins, ...
 \setlength\highlightwidth{8cm}
-\setlength\headerheight{5.5cm}
+\setlength\headerheight{5.3cm}
 \setlength\infoheight{2.5cm}
 \setlength\marginleft{1cm}
 \setlength\marginright{\marginleft}
@@ -297,10 +297,9 @@
                 \begin{minipage}[t][\dimexpr \infoheight]{\linewidth}
                     {\Huge\color{headerfontcolor}\bfseries \@firstname \space \@lastname\par}\vspace{0.2em}
                     
-                    {\large\color{headerfontcolor}\addressfield{\@address}\par}\vspace{0.2em}
+                    {\large\color{headerfontcolor}\addressfield{\@address}\hspace{0.15cm} | \hspace{0.15cm}\phonefield{\@phone}\par}\vspace{0.2em}
 
-                    {\color{headerfontcolor}\phonefield{\@phone}\hspace{0.15cm} | \hspace{0.15cm}\emailfield{\@email}\par}\vspace{0.2em}
-                    {\color{headerfontcolor}\linkedinfield{\@linkedinname}{\@linkedinlink}\hspace{0.15cm} | \hspace{0.15cm}\githubfield{\@githubname}{\@githublink}\hspace{0.15cm} | \hspace{0.15cm}\googlescholarfield{\@googlescholarname}{\@googlescholarlink}\par}\vspace{0.2em}
+                    {\color{headerfontcolor}\emailfield{\@email}\hspace{0.15cm} | \hspace{0.15cm}\linkedinfield{\@linkedinname}{\@linkedinlink}\hspace{0.15cm} | \hspace{0.15cm}\githubfield{\@githubname}{\@githublink}\hspace{0.15cm} | \hspace{0.15cm}\googlescholarfield{\@googlescholarname}{\@googlescholarlink}\par}\vspace{0.2em}
                     %{\color{headerfontcolor}\@infoline\par}
                 \end{minipage}%
                 \vfill%
