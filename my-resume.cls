@@ -176,10 +176,11 @@
 \newcommand{\lastname}[1]{\def\@lastname{#1}}
 
 \newcommand{\address}[1]{\def\@address{#1}}
-\newcommand{\addressfield}[1]{#1}
+\newcommand{\birthday}[1]{\def\@birthday{#1}}
+\newcommand{\addressfield}[1]{\infofield{\large\faHome}{#1}}
 
 \newcommand{\phone}[1]{\def\@phone{#1}}
-\newcommand{\phonefield}[1]{\infofield{\faPhone}{#1}}
+\newcommand{\phonefield}[1]{\infofield{\large\faPhone}{#1}}
 
 \newcommand{\email}[1]{\def\@email{#1}}
 \newcommand{\emailfield}[1]{\infofield{\faEnvelope}{\href{mailto:#1}{#1}}}
@@ -230,7 +231,13 @@
             }{}
             % print the header text
                 \begin{minipage}[t][\dimexpr \infoheight]{\linewidth}
-                    {\Huge\color{headerfontcolor}\bfseries \@firstname \space \@lastname\par}\vspace{0.2em}
+                    \begin{minipage}[t]{0.70\linewidth}
+                        {\Huge\color{headerfontcolor}\bfseries \@firstname \space \@lastname}
+                    \end{minipage}
+                    \begin{minipage}[t]{0.25\linewidth}
+                        {\normalsize\color{headerfontcolor} \textsuperscript{\ast}\@birthday }
+                    \end{minipage}
+                    \par\vspace{0.4em}
                     
                     {\large\color{headerfontcolor}\addressfield{\@address}\hspace{0.15cm} | \hspace{0.15cm}\phonefield{\@phone}\par}\vspace{0.2em}
 
@@ -287,34 +294,37 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % set length of date/place column versus position column in fraction of linewidth before linewidth gets redefined in minipages
-\newlength{\jobdateplacelength}
+\newlength{\jobplacelength}
+\newlength{\jobdatelength}
 \newlength{\jobpositionlength}
-\setlength{\jobdateplacelength}{0.3\textwidth}
-\setlength{\jobpositionlength}{0.7\textwidth}
+\setlength{\jobpositionlength}{0.48\textwidth}
+\setlength{\jobplacelength}{0.32\textwidth}
+\setlength{\jobdatelength}{0.2\textwidth}
+
+
 \newcommand{\job}[4]{%
-    \begin{minipage}[t]{\jobdateplacelength}% minipage for left column with date/place
-        \footnotesize
-        \begin{minipage}[t]{3mm}% wrap marker in minipage to allow multi-line dates
-            \makebox[3mm][c]{\faCalendar}
-        \end{minipage}%
-        \hspace{0.5em}%
-        \begin{minipage}[t]{\dimexpr \jobdateplacelength-3mm-0.5em}% wrap date in minipage to allow multi-line dates
-            #1
-        \end{minipage}%
-        \par
-        \vspace{0.1em}
-        \begin{minipage}[t]{3mm}% wrap marker in minipage to allow multi-line places
-            \makebox[3mm][c]{\faMapMarker}
-        \end{minipage}%
-        \hspace{0.5em}%
-        \begin{minipage}[t]{\dimexpr \jobdateplacelength-3mm-0.5em}% wrap place in minipage to allow multi-line places
-            \textcolor{accent}{#2}
-        \end{minipage}%
-    \end{minipage}%
     \begin{minipage}[t]{\jobpositionlength}% minipage for position
-        {\large \textcolor{accent}{#3}}
+        {\large \textcolor{accent}{#1}}
     \end{minipage}%
-    \ifstrequal{#4}{}{}{\par \vspace{0.1em} \footnotesize #4}
+    \begin{minipage}[t]{\jobplacelength}% minipage for position
+        \begin{minipage}[t]{3mm}% wrap marker in minipage to allow multi-line dates
+            {\normalsize\makebox[3mm][c]{\faBuilding}}
+        \end{minipage}%
+        \hspace{0.5em}%
+        \begin{minipage}[t]{\dimexpr \jobplacelength-3mm-0.5em}% wrap date in minipage to allow multi-line dates
+            {\large \textcolor{accent}{#2}}
+        \end{minipage}%
+    \end{minipage}%
+    \begin{minipage}[t]{\jobdatelength}% minipage for position
+        \begin{minipage}[t]{3mm}% wrap marker in minipage to allow multi-line dates
+            {\normalsize\makebox[3mm][c]{\faCalendar}}
+        \end{minipage}%
+        \hspace{0.5em}%
+        \begin{minipage}[t]{\dimexpr \jobdatelength-3mm-0.5em}% wrap date in minipage to allow multi-line dates
+            {\large #3}
+        \end{minipage}%
+    \end{minipage}%
+    \ifstrequal{#4}{}{}{\par \vspace{0.1em} \small #4}
     \par\normalsize
     \vspace{0.5em}
 }
@@ -332,9 +342,9 @@
         \textcolor{accent}{#1}
     \end{minipage}%
     %
-    \begin{minipage}[t]{4em}\end{minipage}
+    \hspace{0.5em}
     %
-    \begin{minipage}[t]{\dimexpr\skilllisttaglength-4em}% minipage for position
+    \begin{minipage}[t]{\dimexpr\skilllisttaglength-0.5em}% minipage for position
         #2
     \end{minipage}%
     \par
