@@ -67,7 +67,6 @@
 % DEFINE GEOMETRY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newlength\highlightwidth
 \newlength\headerheight
 \newlength{\infoheight}
 \newlength\marginleft
@@ -76,7 +75,6 @@
 \newlength\marginbottom
 
 % default sizes, margins, ...
-\setlength\highlightwidth{8cm}
 \setlength\headerheight{5.3cm}
 \setlength\infoheight{2.5cm}
 \setlength\marginleft{1cm}
@@ -134,71 +132,8 @@
 \RequirePackage{xpatch}
 \RequirePackage{scrlayer-scrpage}
 
-% declare new page style using layers
-\DeclareNewPageStyleByLayers{headerhighlightmain}{%
-  highlightbar.even,%
-  highlightbar.odd,%
-  header.bg
-}
-\DeclareNewPageStyleByLayers{highlightmain}{%
-  highlightbar.even,%
-  highlightbar.odd
-}
 \DeclareNewPageStyleByLayers{headermain}{%
   header.bg
-}
-
-% define the layer for the highlight bar on odd pages
-\DeclareNewLayer[
-  background,
-  oddpage,
-  innermargin,
-  width=\highlightwidth,
-  contents={\color{highlightbarcolor}\rule{\layerwidth}{\layerheight}}
-]{highlightbar.odd}
-
-% clone highlight bar form odd pages to even pages
-% on same side for digital format
-\newcommand*\highlightbarsingle{%
-\DeclareNewLayer[
-  background,
-  evenpage,
-  outermargin,
-  width=\highlightwidth,
-  contents={\color{highlightbarcolor}\rule{\layerwidth}{\layerheight}}
-]{highlightbar.even}
-}
-
-% clone highlight bar from odd pages to even pages
-% on opposite sides for prints
-\newcommand*\highlightbardouble{%
-\DeclareNewLayer[
-    clone=highlightbar.odd,
-    evenpage,
-    align=r,
-    hoffset=\paperwidth
-  ]{highlightbar.even}
- }
-
-% use the correct version of the highlight bar on even pages
-% single for single, double for double
-\ifthenelse{
-    \boolean{@singleordouble}
-}{%
-    \DeclareNewLayer[
-      background,
-      evenpage,
-      outermargin,
-      width=\highlightwidth,
-      contents={\color{highlightbarcolor}\rule{\layerwidth}{\layerheight}}
-    ]{highlightbar.even}
-}{%
-    \DeclareNewLayer[
-        clone=highlightbar.odd,
-        evenpage,
-        align=r,
-        hoffset=\paperwidth
-      ]{highlightbar.even}
 }
 
 % define the layer for the header 
@@ -257,7 +192,7 @@
 \newcommand{\githubfield}[2]{\infofield{\faGithub}{\href{#2}{#1}}}
 
 \newcommand{\googlescholar}[2]{\def\@googlescholarname{#1}\def\@googlescholarlink{#2}}
-\newcommand{\googlescholarfield}[2]{\infofield{\aiGoogleScholar}{\href{#2}{#1}}}
+\newcommand{\googlescholarfield}[2]{\infofield{\makebox[3mm][c]{\aiGoogleScholar}}{\href{#2}{#1}}}
 
 \newcommand{\tagline}[1]{\def\@tagline{#1}}
 \newcommand{\photo}[3][]{\def\@photo{#2}\def\@photodiameter{#3}\def\@photoformat{#1}}
@@ -329,56 +264,6 @@
     \vspace*{\dimexpr \headerheight+0.5em}
 }
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% BODY
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% highlight bar
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\highlightbar}[1]{%
-    \def\@highlightbar{%
-        \begin{minipage}[t]{\dimexpr \highlightwidth-\marginleft-\marginright}%
-            #1%
-        \end{minipage}%
-    }
-}
-
-% main bar
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\mainbar}[1]{%
-    \def\@mainbar{%
-        \begin{minipage}[t]{\dimexpr \textwidth-\highlightwidth}%
-            #1%
-        \end{minipage}%
-    }
-}
-
-% make body with highlight bar and main bar
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\makebody}{%
-    \ifthenelse{\boolean{@singleordouble}}
-        {% if single layout, the highlight bar is always left
-            \@highlightbar
-            \hspace{\dimexpr \marginleft+\marginright}%
-            \@mainbar
-        }{% if double layout, the highlight bar alternates
-            \Ifthispageodd{% if the page is odd, the highlight bar is on the left (as is for single layout)
-                \@highlightbar
-                \hspace{\dimexpr \marginleft+\marginright}%
-                \@mainbar
-            }{%  if the page is even, the highlight bar is on the right
-                \@mainbar
-                \hspace{\dimexpr \marginleft+\marginright}%
-                \@highlightbar
-            }   
-        }
-}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTIONS, SUBSECTIONS, AND MORE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -404,8 +289,8 @@
 % set length of date/place column versus position column in fraction of linewidth before linewidth gets redefined in minipages
 \newlength{\jobdateplacelength}
 \newlength{\jobpositionlength}
-\setlength{\jobdateplacelength}{0.4\linewidth}
-\setlength{\jobpositionlength}{0.6\linewidth}
+\setlength{\jobdateplacelength}{0.3\textwidth}
+\setlength{\jobpositionlength}{0.7\textwidth}
 \newcommand{\job}[4]{%
     \begin{minipage}[t]{\jobdateplacelength}% minipage for left column with date/place
         \footnotesize
@@ -423,11 +308,11 @@
         \end{minipage}%
         \hspace{0.5em}%
         \begin{minipage}[t]{\dimexpr \jobdateplacelength-3mm-0.5em}% wrap place in minipage to allow multi-line places
-            #2
+            \textcolor{accent}{#2}
         \end{minipage}%
     \end{minipage}%
     \begin{minipage}[t]{\jobpositionlength}% minipage for position
-        {\large \color{emphasis} #3}
+        {\large \textcolor{accent}{#3}}
     \end{minipage}%
     \ifstrequal{#4}{}{}{\par \vspace{0.1em} \footnotesize #4}
     \par\normalsize
@@ -435,10 +320,32 @@
 }
 
 
+% skilllist
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newlength{\skilllistnamelength}
+\newlength{\skilllisttaglength}
+\setlength{\skilllistnamelength}{0.3\textwidth}
+\setlength{\skilllisttaglength}{0.7\textwidth}
+\newcommand{\skilllist}[2]{
+    \begin{minipage}[t]{\skilllistnamelength}% minipage for left column with date/place
+        \raggedleft
+        \textcolor{accent}{#1}
+    \end{minipage}%
+    %
+    \begin{minipage}[t]{4em}\end{minipage}
+    %
+    \begin{minipage}[t]{\dimexpr\skilllisttaglength-4em}% minipage for position
+        #2
+    \end{minipage}%
+    \par
+    \vspace{0.2em}
+}
+
+
 % skill with 5 dot bar chart
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\skill}[2]{%
+\newcommand{\skillpoints}[2]{%
     \textcolor{emphasis}{\textbf{#1}}\hfill
     \foreach \x in {1,...,5}{%
       \space{\ifnumgreater{\x}{#2}{\color{gray}}{\color{accent}}\faCircle}}\par%
@@ -622,7 +529,6 @@
 % FINAL FORMATTING
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pagestyle{headerhighlightmain}
 \RequirePackage{hyperref}
 
 

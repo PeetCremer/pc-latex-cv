@@ -8,7 +8,6 @@
 % set geometry
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setlength\highlightwidth{8cm}
 %\setlength\headerheight{4cm}            % note that margintop gets added to this value, i.e. the header bar is 5cm
 \setlength\marginleft{1cm}
 \setlength\marginright{\marginleft}      % needs to be 1.5 times to be actually equal. why?
@@ -37,10 +36,16 @@
 \colorlet{emphasis}{black}
 \colorlet{body}{black}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Additional Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=awesome-skyblue,urlcolor=awesome-skyblue}
 
+\usepackage{cleveref}[2012/02/15]% v0.18.4; 
+\crefformat{footnote}{#2\footnotemark[#1]#3}
 
 
 
@@ -50,6 +55,8 @@
 
 \begin{document}
 
+\pagestyle{headermain}
+
 \firstname{Dr. Peet}\lastname{Cremer}
 
 \address{Weseler Str. 22, 40239 Düsseldorf, Germany}
@@ -58,6 +65,9 @@
 \linkedin{Peet Cremer}{https://www.linkedin.com/in/peet-cremer-5286601a6/}
 \github{@PeetCremer}{https://github.com/PeetCremer}
 \googlescholar{Publication list}{https://scholar.google.com/citations?hl=de&user=MnU8ZxwAAAAJ}
+%\homepage{peetcremer.com}{https://www.peetcremer.de}
+%\orcid{0000-0001-6040-6596}{https://orcid.org/0000-0001-6040-6596}
+%\ads{NASA/ADS publication list}{https://ui.adsabs.harvard.edu/search/fq=\%7B!type\%3Daqp\%20v\%3D\%24fq\_database\%7D&fq\_database=database\%3A\%20astronomy&p\_=0&q=pubdate\%3A\%5B2016-01\%20TO\%209999-12\%5D\%20author\%3A(\%22Krieger\%2C\%20Nico\%22)&sort=date\%20desc\%2C\%20bibcode\%20desc}
 
 
 \tagline{I am an AI Software Engineer and Data-Scientist with a background in Statistical Physics and Computer Science. 
@@ -67,119 +77,138 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
 
 \makeheader
 
-\highlightbar{
+% \highlightbar{
 
-    \section{Contact}
+%     \section{Contact}
     
-    %\email{peet.cremer@gmail.com}
-    %\phone{+49 151 64548894}
+%     %\email{peet.cremer@gmail.com}
+%     %\phone{+49 151 64548894}
     
-    %\location{Weseler Str. 22, 40239 Düsseldorf}
-    %\vspace{0.5em}
-    %\linkedin{Peet Cremer}{https://www.linkedin.com/in/peet-cremer-5286601a6/}
-    %\googlescholar{Publication list}{https://scholar.google.com/citations?hl=de&user=MnU8ZxwAAAAJ}
-    %\github{@PeetCremer}{https://github.com/PeetCremer}
-    %\homepage{peetcremer.com}{https://www.peetcremer.de}
-    %\orcid{0000-0001-6040-6596}{https://orcid.org/0000-0001-6040-6596}
-    %\ads{NASA/ADS publication list}{https://ui.adsabs.harvard.edu/search/fq=\%7B!type\%3Daqp\%20v\%3D\%24fq\_database\%7D&fq\_database=database\%3A\%20astronomy&p\_=0&q=pubdate\%3A\%5B2016-01\%20TO\%209999-12\%5D\%20author\%3A(\%22Krieger\%2C\%20Nico\%22)&sort=date\%20desc\%2C\%20bibcode\%20desc}
+%     %\location{Weseler Str. 22, 40239 Düsseldorf}
+%     %\vspace{0.5em}
+%     %\linkedin{Peet Cremer}{https://www.linkedin.com/in/peet-cremer-5286601a6/}
+%     %\googlescholar{Publication list}{https://scholar.google.com/citations?hl=de&user=MnU8ZxwAAAAJ}
+%     %\github{@PeetCremer}{https://github.com/PeetCremer}
+%     %\homepage{peetcremer.com}{https://www.peetcremer.de}
+%     %\orcid{0000-0001-6040-6596}{https://orcid.org/0000-0001-6040-6596}
+%     %\ads{NASA/ADS publication list}{https://ui.adsabs.harvard.edu/search/fq=\%7B!type\%3Daqp\%20v\%3D\%24fq\_database\%7D&fq\_database=database\%3A\%20astronomy&p\_=0&q=pubdate\%3A\%5B2016-01\%20TO\%209999-12\%5D\%20author\%3A(\%22Krieger\%2C\%20Nico\%22)&sort=date\%20desc\%2C\%20bibcode\%20desc}
     
-    \section{Skills}
+%     \section{Skills}
     
-    \skillsection{Programming}
-    \skill{Python}{5}
-    \skill{Bash}{4}
-    \skill{C++}{2}
-    \skill{Apple Script}{3}
-    \skill{HTML/CSS}{3}
-    \skill{LaTeX}{4}
+%     \skillsection{Programming}
+%     \skill{Python}{5}
+%     \skill{Bash}{4}
+%     \skill{C++}{2}
+%     \skill{Apple Script}{3}
+%     \skill{HTML/CSS}{3}
+%     \skill{LaTeX}{4}
     
-    \vspace{0.5em}
-    \skillsection{Operating Systems}
-    \skill{Linux}{4}
-    \skill{MacOS}{5}
-    \skill{Windows}{3}
+%     \vspace{0.5em}
+%     \skillsection{Operating Systems}
+%     \skill{Linux}{4}
+%     \skill{MacOS}{5}
+%     \skill{Windows}{3}
     
-    \vspace{0.5em}
-    \skillsection{Software \& Tools}
-    \skill{Visualisation}{5}
-    (e.g. matplotlib, gnuplot, ...)\\
-    \skill{Data handling/analysis}{5}
-    (e.g. numpy, scipy, pandas, ...)\\
-    \skill{Docker}{3}
-    \skill{Office}{4}
+%     \vspace{0.5em}
+%     \skillsection{Software \& Tools}
+%     \skill{Visualisation}{5}
+%     (e.g. matplotlib, gnuplot, ...)\\
+%     \skill{Data handling/analysis}{5}
+%     (e.g. numpy, scipy, pandas, ...)\\
+%     \skill{Docker}{3}
+%     \skill{Office}{4}
     
-    \vspace{0.5em}
-    \skillsection{Another skill subsection header}
-    You can also put simply text here without the dots.
+%     \vspace{0.5em}
+%     \skillsection{Another skill subsection header}
+%     You can also put simply text here without the dots.
     
-    \vspace{0.5em}
-    \skillsection{Languages}
-    \skill{German}{5}
-    \skill{English}{5}
-    \skill{French}{2}
-    \bigskip
+%     \vspace{0.5em}
+%     \skillsection{Languages}
+%     \skill{German}{5}
+%     \skill{English}{5}
+%     \skill{French}{2}
+%     \bigskip
     
-    \section{Certificates}
-    \simpleskill{AWS certified cloud practitioner}
+%     \section{Certificates}
+%     \simpleskill{AWS certified cloud practitioner}
+% }
 
-}
-\mainbar{
-    \section{About this template}
-    Section are set in bold face. An optional parameter of \texttt{\textbackslash section} takes a symbol to add in front of the text. This option is used in the jobs and education sections below.
-    
-    \section[\faGears]{Work history}
-    \job{date}
-        {Employer name and city}
-        {Position Title}
-        {Additional details for this position. Can be left empty to omit this line}
-    \job{01/2020 - 12/2020}
-        {An employer with a long name,\\City in new line}
-        {Previous position}
-        {}
-    
-    \section[\faMortarBoard]{Education}
-    \job{01/2019 - 12/2019}
-        {University, City}
-        {Bachelor of Something}
-        {}
+\section[\faBriefcase]{Work experience}
+\job{12/2020 - present}
+    {APTIV}
+    {AI Lead Developer}
+    {\begin{itemize}
+        \item Planning and execution of Machine-Learning and Data Infrastructure projects. 
+        \item Establishment of new technologies and risk mitigation. Cross-functional role as a technical adviser in various projects. 
+        \item Design of technical pathways to AI solutions and their efficient implementation.
+        \item Participation at conferences to identify new developments in AI Research. Guidance of colleagues to integrate these new trends into the daily work.
+    \end{itemize}}
+\job{07/2017 - 12/2020}
+    {APTIV}
+    {Software Development Expert}
+    {\begin{itemize}
+        \item Development of infrastructure solutions for artifical intelligence in automotive applications. 
+        \item SCRUM Product Owner for a data warehouse solutions for automotive sensor data. 
+        \item Setup of a microservice solution for automatizing AI workflows.
+        \item Supervision of a Master Thesis on using GANs for automotive data style transfer.
+    \end{itemize}}
 
-    \section{Achievements, honours and awards}
-    \achievement{My first achievement}
-    \achievement{My second achievement}
-
-    \section{General Skills}
-    \smallskip % additional skip because tag outlines use up space
-    \tag{Tag 1}
-    \tag{Tag 2}
-    \tag{and}
-    \tag{another tag}
-    \tag{some more tags}
-    \tag{yet another one}
-    \tag{tags flow over}
-    \tag{to the next line}
-    \tag{if necessary}
-    
-    \medskip
-    Tags must be ordered by hand with newlines to get a nice layout, especially for long tags.
-    
-    \section{Wheel Chart}
-    % This is taken from AltaCV
-    % see https://github.com/liantze/AltaCV for details
-    \wheelchart{1.5cm}{0.5cm}{% outer and inner diameter
-        6/8em/accent!20/Sleep,          % comma-separated list of
-        8/8em/accent!40/Daytime job,    % fraction of 24 / line length / color / label
-        2/8em/accent!80/Training,          % here, the color is shades of the accent color
-        3/8em/accent!60/Recovering from fighting criminals,
-        5/8em/accent/Being Batman
+\section[\faMortarBoard]{Education}
+\job{2013 - 2017}
+    {University of Düsseldorf}
+    {Doctor (Ph.D.), Theoretical Soft Matter Physics}
+    {
+        \begin{itemize}
+            \item Topic: Mesoscale modeling of magnetic elastomers and gels -- theory and simulations
+            \item Solutions of magneto-elastic coupling models using numerical simulations, the finite element method, as well as density functional theory. 
+            \item This work has resulted in 7 publications in recognized peer-reviewed journals (see \href{https://scholar.google.com/citations?hl=de&user=MnU8ZxwAAAAJ}{publication list}).
+        \end{itemize}
     }
-}
-\makebody
+\job{2012 - 2013}
+    {University of Düsseldorf}
+    {Master of Science (M. Sc.), Physics}
+    {
+        \begin{itemize}
+            \item \textbf{Gpa: 1.1}\footnote{\label{footnote1}Grades in German universities range from 4.0 (worst) to 1.0 (best).}. Minor: Mathematics.
+            \item Focus on Soft Matter, Plasma Physics, Solid-State and Nanophysics.
+            \item Master thesis: "Emergent states in active systems" was published as a \href{https://journals.aps.org/pre/abstract/10.1103/PhysRevE.89.022307}{journal article}.
+        \end{itemize}
+    }
+\job{2008 - 2012}
+    {University of Düsseldorf}
+    {Bachelor of Science (B. Sc.), Physics}
+    {
+        \begin{itemize}
+            \item \textbf{Gpa: 1.3}\cref{footnote1}. Minor: Mathematics
+            \item Bachelor thesis: "Orientational fields in Plastic Crystal" was published as a \href{https://epljournal.edpsciences.org/articles/epl/abs/2012/15/epl14756/epl14756.html}{journal article}.
+        \end{itemize}
+    }
+
+\section[\faFlask]{Skills}
+\skilllist{Programming languages}{\tag{Python} \tag{C++} \tag{C} \tag{Rust} \tag{Typescript}}
+\skilllist{Languages}{German (native), English (full professional proficiency), Norwegian (intermediate), French (intermediate), Norwegian (basic)}
+%\smallskip % additional skip because tag outlines use up space
+
+\section[\faTrophy]{Achievements, honours, and awards}
+\achievement{Best Poster presentation at the 15\textsuperscript{th} German Ferrofluid Workshop in Rostock (2015).}
+\achievement{DAAD scholarship ''RISE in North America`` for a three month research internship at Yale University, CT (2010)}
+
+\medskip
+Tags must be ordered by hand with newlines to get a nice layout, especially for long tags.
+
+\section[\\faGears]{IT projects}
+
+\section[\faBook]{Teaching}
+% This is taken from AltaCV
+% see https://github.com/liantze/AltaCV for details
+
+%\makebody
 \clearpage
 
 
-\pagestyle{highlightmain}
-\highlightbar{}
-\mainbar{
+\pagestyle{empty}
+%\highlightbar{}
+%\mainbar{
 
     \section{Another section}
     
@@ -198,8 +227,8 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
     Subsection are also bold face but a smaller font then section. They also omit the rule.
     
 
-}
-\makebody
+%}
+%\makebody
 
 
 \clearpage

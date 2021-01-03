@@ -2,6 +2,7 @@ CV: CV_en.pdf
 
 CV_en.pdf: CV_en.tex my-resume.cls
 	lualatex CV_en.tex
+	lualatex CV_en.tex
 
 clean:
 	rm -f *.pdf || true
