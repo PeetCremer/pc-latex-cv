@@ -82,156 +82,210 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
 \job{AI Lead Developer}
     {APTIV (Wuppertal, Germany)}
     {12/2020 - present}
-    {\begin{itemize}
+    {\begin{itemize}[leftmargin=2em]
         \item Planning and execution of Machine-Learning and Data Infrastructure projects in the automotive industry. 
         \item Establishment of new technologies and risk mitigation. Cross-functional role as a technical adviser in various projects. 
         \item Design of technical pathways to AI solutions and their efficient implementation.
         \item Participation at conferences to identify new developments in AI Research. Guidance of colleagues to integrate these new trends into the daily work.
     \end{itemize}}
+%
 \job{Software Development Expert}
     {APTIV (Wuppertal, Germany)}
     {07/2017 - 12/2020}
-    {\begin{itemize}
+    {\begin{itemize}[leftmargin=2em]
         \item Development of infrastructure solutions for artifical intelligence in automotive applications. 
         \item SCRUM Product Owner for a data warehouse solutions for automotive sensor data. 
         \item Setup of a microservice solution for automatizing AI workflows.
         \item Supervision of a Master Thesis on using GANs for automotive data style transfer.
     \end{itemize}}
 
+
 \section[\faMortarBoard]{Education}
 \job{Doctor (Ph.D.), Theoretical Soft Matter Physics}
     {University of Düsseldorf}
     {2013 - 2017}
     {
-        \begin{itemize}
+        \begin{itemize}[leftmargin=2em]
             \item Topic: Mesoscale modeling of magnetic elastomers and gels -- theory and simulations
             \item Solutions of magneto-elastic coupling models using numerical simulations, the finite element method, as well as density functional theory. 
             \item This work has resulted in 7 publications in recognized peer-reviewed journals (see \href{https://scholar.google.com/citations?hl=de&user=MnU8ZxwAAAAJ}{publication list}).
         \end{itemize}
     }
+%
 \job{Master of Science (M. Sc.), Physics}
     {University of Düsseldorf}
     {2012 - 2013}
     {
-        \begin{itemize}
+        \begin{itemize}[leftmargin=2em]
             \item \textbf{Gpa: 1.1}\footnote{\label{footnote1}Grades in German universities range from 4.0 (worst) to 1.0 (best).}. Minor: Mathematics.
             \item Focus on Soft Matter, Plasma Physics, Solid-State and Nanophysics.
             \item Master thesis: "Emergent states in active systems" was published as a \href{https://journals.aps.org/pre/abstract/10.1103/PhysRevE.89.022307}{journal article}.
         \end{itemize}
     }
+%
 \job{Bachelor of Science (B. Sc.), Physics}
     {University of Düsseldorf}
     {2008 - 2012}
     {
-        \begin{itemize}
+        \begin{itemize}[leftmargin=2em]
             \item \textbf{Gpa: 1.3}\cref{footnote1}. Minor: Mathematics
             \item Bachelor thesis: "Orientational fields in Plastic Crystal" was published as a \href{https://epljournal.edpsciences.org/articles/epl/abs/2012/15/epl14756/epl14756.html}{journal article}.
         \end{itemize}
     }
 
+
 \section[\faFlask]{Skills}
 \skilllist{Programming languages}{\tag{Python} \tag{C++} \tag{C} \tag{Rust} \tag{Typescript}}
-\skilllist{IT working knowledge}{\tag{git} \tag{Docker} \tag{Gitlab} \tag{VS Code} \tag{MongoDB} \tag{REST} \tag{bash} \tag{Linux} \tag{Node.js} \tag{MS Azure} \tag{Matlab} \tag{vim} \tag{\LaTeX} \tag{MS Office}}
-\skilllist{Libraries and frameworks}{\tag{TensorFlow} \tag{PyTorch} \tag{scikit-learn} \tag{matplotlib} \tag{numpy} \tag{scipy} \tag{Qt} \tag{HDF5} \tag{pandas} \tag{libpcap} \tag{OpenMP}}
-\skilllist{Agile software development}{\tag{Scrum} \tag{Kanban} \tag{Jira}}
+\skilllist{IT working knowledge}{\tag{git} \tag{Docker} \tag{Gitlab} \tag{VS Code} \tag{MongoDB} \tag{REST} \tag{bash} \tag{Linux (Ubuntu, Debian)} \tag{Node.js} \tag{MS Azure} \tag{Matlab} \tag{vim} \tag{\LaTeX} \tag{MS Office}}
+\skilllist{Libraries and frameworks}{\tag{TensorFlow} \tag{PyTorch} \tag{scikit-learn} \tag{matplotlib} \tag{numpy} \tag{scipy} \tag{Qt} \tag{HDF5} \tag{pandas} \tag{OpenMP}}
+\skilllist{Machine Learning Techniques}{\tag {SVMs} \tag{Gradient Boosting} \tag{Population Strategies} \tag{Decision Trees} \tag{CNNs}}
+\skilllist{Agile software development}{\tag{Scrum (Product Owner)} \tag{Kanban} \tag{Jira}}
 \skilllist{Languages}{German (native), English (full professional proficiency), \\ French (intermediate), Norwegian (basic)}
 %\smallskip % additional skip because tag outlines use up space
+
+
+\clearpage
+\pagestyle{empty}
 
 \section[\faTrophy]{Achievements, honours, and awards}
 \achievement{Best Poster presentation at the 15\textsuperscript{th} German Ferrofluid Workshop in Rostock (2015).}
 \achievement{DAAD scholarship ''RISE in North America`` for a three month research internship at Yale University, CT (2010)}
 
-\clearpage
-\pagestyle{empty}
 
-\section[\faGears]{IT projects}
-\job{Automatic Code-generator for CNNs}
+\section[\faGears]{IT and Data Science projects}
+\job{Live execution of detection network in test vehicle}
     {APTIV, Wuppertal, Germany}
-    {07/2017 - 10/2017}
-    {\begin{itemize}
-        \item Implemented code generator in Matlab that, given a CNN trained in TensorFlow, creates optimized C++ code to execute that CNN on a TI embedded chip. 
+    {11/2020 - 12/2020}
+    {\begin{itemize}[leftmargin=2em]
+        \item Deploymed a 3d bounding box detection network on Nvidia Jetson Xavier hardware 
+        \item Optimizations and tweaks to make an automotive detection network fast enough to run live in the test vehicle
     \end{itemize}}
-\job{Simple Raytracer to simulate FMCW Radars}
+%
+\job{Runtime environment for AI-algorithms}
     {APTIV, Wuppertal, Germany}
-    {11/2017 - 12/2017}
-    {\begin{itemize}
-        \item Simulated an Automative-FMCW Radar by implementing a simple raytracer in Python in order to generate artificical training data. 
+    {06/2020 - 10/2020}
+    {\begin{itemize}[leftmargin=2em]
+        \item Runtime environment written in Rust for live execution of AI algorithms in test vehicles for demo purposes
+        \item Main contribution: Combining and digesting raw sensor data into what the TensorFlow network expects and subsequent postprocessing of the results. 
     \end{itemize}}
-\job{LiDAR Labeling Tool}
+%
+ \job{Tooling for neural network training}
     {APTIV, Wuppertal, Germany}
-    {01/2018 - 08/2018}
-    {\begin{itemize}
-        \item Work on a web-based labeling tool for 3D bounding boxes in LiDAR point clouds using TypeScript.
-        \item Backend development using MEAN stack (MongoDB, Express, Angular, Node.js). Main contributions: User and group management and data upload
+    {02/2020 - 03/2020}
+    {\begin{itemize}[leftmargin=2em]
+        \item Python / Rust tooling to download sensor data and ground truth from a data warehouse and refine it for neural network training
+        \item Sophisticated interpolation algorithm for 3d bounding boxes to arbitrary timestamps
+        \item Using HDF5 as final data exchange format
     \end{itemize}}
-\job{Automotive Recording Tool}
+%
+\job{Machine-Learning automation using microservices}
     {APTIV, Wuppertal, Germany}
-    {07/2018 - 08/2018}
-    {\begin{itemize}
-        \item Development of a tool using C++ and Qt for the recording of sensor data in a test vehicle.
-        \item Recording of LiDAR (via UDP), Vehicle host bus and radar detections (via CAN), and radar debug information (via UDP).
-        \item Emphasis on correct timestamping of recorded sensor data, such that it can be replayed after recording 
+    {03/2020 - 05/2020}
+    {\begin{itemize}[leftmargin=2em]
+        \item Established a Python microservice framework for the automatic execution of Machine-Learning algorithms
+        \item Automatic triggering of execution pipelines on trigger events, such as the availability of new data
     \end{itemize}}
-\job{???}
-    {APTIV, Wuppertal, Germany}
-    {09/2018 - 12/2018}
-    {}
-\job{3D object detection on automotive radar data}
-    {APTIV, Wuppertal, Germany}
-    {12/2018 - 01/2019}
-    {\begin{itemize}
-        \item Lead of a team of 5 engineers for a short-termed proof of concept
-        \item Successfully demonstrated 3D object detection on automotive radar raw data using CNNs
+%
+\job{Deploying a facial expression detection system}
+    {Affectiva, Boston, MA}
+    {08/2019}
+    {\begin{itemize}[leftmargin=2em]
+        \item Short-noticed support of cooperation partner Affectiva in Boston to mitigate risk in a customer project
+        \item Made key contributions for deploying a facial expression detection system using TensorFlow and TF-Lite
     \end{itemize}}
+%
 \job{Product Owner for a data warehouse project}
     {APTIV, Wuppertal, Germany}
     {02/2019 - 02/2020}
-    {\begin{itemize}
+    {\begin{itemize}[leftmargin=2em]
         \item Lead of a SCRUM team of 5 developers to establish a data warehouse for automotive sensor data and algorithm results
         \item Access to automotive driving scenariosfor the development of AI-based driver assistance system 
         \item Based on MEAN stack, hosted in Azure using BlobStorage for larger binary data. Orchestrated using docker-compose
         \item Featuring REST-API, a Python access client, a frontend with a video playback tool, and full backend test coverage
     \end{itemize}}
-\job{Risk mitigation at Affectiva, Boston}
-    {Affectiva, Boston, MA}
-    {08/2019}
-    {\begin{itemize}
-        \item Short-noticed support of cooperation partner Affectiva in Boston to mitigate risk in a customer project
-        \item Made key contributions for deploying a facial expression detection system using TensorFlow and TF-Lite
-    \end{itemize}}
-\job{Machine-Learning automation using microservices}
+%
+\job{3D object detection on automotive radar data}
     {APTIV, Wuppertal, Germany}
-    {03/2020 - 05/2020}
-    {\begin{itemize}
-        \item Established a Python microservice framework for the automatic execution of Machine-Learning algorithms
-        \item Automatic triggering of execution pipelines on trigger events, such as the availability of new data
+    {12/2018 - 01/2019}
+    {\begin{itemize}[leftmargin=2em]
+        \item Lead of a team of 5 engineers for a short-termed proof of concept
+        \item Successfully demonstrated 3D object detection on automotive radar raw data using CNNs
     \end{itemize}}
-\job{Tooling for neural network training}
+%
+\job{Automotive Recording Tool}
     {APTIV, Wuppertal, Germany}
-    {02/2020 - 03/2020}
-    {\begin{itemize}
-        \item Python / Rust tooling to download sensor data and ground truth from a data warehouse and refine it for neural network training
-        \item Sophisticated interpolation algorithm for 3d bounding boxes to arbitrary timestamps
-        \item Using HDF5 as final data exchange format
+    {07/2018 - 08/2018}
+    {\begin{itemize}[leftmargin=2em]
+        \item Development of a tool using C++ and Qt for the recording of sensor data in a test vehicle.
+        \item Recording of LiDAR (via UDP), Vehicle host bus and radar detections (via CAN), and radar debug information (via UDP).
+        \item Emphasis on correct timestamping of recorded sensor data, such that it can be replayed after recording 
     \end{itemize}}
-\job{Runtime environment for AI-algorithms}
+%
+\job{LiDAR Labeling Tool}
     {APTIV, Wuppertal, Germany}
-    {06/2020 - 10/2020}
-    {\begin{itemize}
-        \item Runtime environment written in Rust for live execution of AI algorithms in test vehicles for demo purposes
-        \item Main contribution: Combining and digesting raw sensor data into what the TensorFlow network expects and subsequent postprocessing of the results. 
+    {01/2018 - 12/2018}
+    {\begin{itemize}[leftmargin=2em]
+        \item Work on a web-based labeling tool for 3D bounding boxes in LiDAR point clouds using TypeScript.
+        \item Backend development using MEAN stack (MongoDB, Express, Angular, Node.js). Main contributions: User and group management and data upload
     \end{itemize}}
-\job{Live execution of detection network in test vehicle}
+%
+\job{Simple Raytracer to simulate FMCW Radars}
     {APTIV, Wuppertal, Germany}
-    {11/2020 - 12/2020}
-    {\begin{itemize}
-        \item Deploymed a 3d bounding box detection network on Nvidia Jetson Xavier hardware 
-        \item Optimizations and tweaks to make an automotive detection network fast enough to run live in the test vehicle
+    {11/2017 - 12/2017}
+    {\begin{itemize}[leftmargin=2em]
+        \item Simulated an Automative-FMCW Radar by implementing a simple raytracer in Python in order to generate artificical training data. 
+    \end{itemize}}
+%
+\job{Automatic Code-generator for CNNs}
+    {APTIV, Wuppertal, Germany}
+    {07/2017 - 10/2017}
+    {\begin{itemize}[leftmargin=2em]
+        \item Implemented code generator in Matlab that, given a CNN trained in TensorFlow, creates optimized C++ code to execute that CNN on a TI embedded chip. 
     \end{itemize}}
 
+\clearpage
+\pagestyle{empty}
 
 \section[\faBook]{Teaching}
-% This is taken from AltaCV
-% see https://github.com/liantze/AltaCV for details
+\job{Lecturer on \\ artificial intelligence in autonomous driving}
+    {University of Wuppertal,\\ Germany}
+    {10/2020 - present}
+    {\begin{itemize}[leftmargin=2em]
+        \item Lecture "Artificial Intelligence Based Sensor Signal Processing for Autonomous Driving" traditionally given with colleagues from APTIV
+        \item Designed and held 3 lectures about the topics: Numerical Optimization in Data Science, Support Vector Machines, and Gradient Boosting
+    \end{itemize}}
+%
+\job{Master thesis supervision}
+    {APTIV, Wuppertal, Germany}
+    {03/2019 - 09/2019}
+    {\begin{itemize}[leftmargin=2em]
+        \item Supervised a master student on using GANs for automotive data style transfer
+        \item Created artificial LiDAR data by modding the video game GTA: V, then trained a GAN on real LiDAR data to do the domain transform
+        \item Tested and benchmarked this approach with a birds-eye-view 2D object detection model
+    \end{itemize}}
+%
+\job{Bachelor thesis supervision}
+    {University of Düsseldorf, \\ Germany}
+    {2016}
+    {\begin{itemize}[leftmargin=2em]
+        \item Supervised a bachelor student on the numerical simulation of magnetic gels 
+    \end{itemize}}
+%
+\job{Teaching assistant for theoretical physics lectures}
+    {University of Düsseldorf, \\ Germany}
+    {2013-2017}
+    {\begin{itemize}[leftmargin=2em]
+        \item Lectures: Quantum Mechanics and Statistical Mechanics
+        \item Created homeworks and gave exercise classes
+        \item Answered student questions about the lecture topics
+        \item Designed and held oral and written exams
+    \end{itemize}}
 
+
+\section[\faMusic]{About Me}
+\skilllist{Interests}{I am enthusiastic about tech and science related topics in general. To follow the recent developments in machine learning I like to read papers on arXiv and from the ICLR conference and I follow \href{https://towardsdatascience.com/}{towardsdatascience} and the \href{https://www.reddit.com/r/MachineLearning/}{/r/MachineLearning} subreddit. To stay on top of new trends in software engineering and science topics in general, I regularly browse \href{https://news.ycombinator.com/}{Hacker News}.}
+\vspace{0.5em}
+\skilllist{Activities}{Sozializing with friends has always been important to me. I am an enthusiastic Pen \& Paper gamemaster since 19 years and often meet with friends to indulge together in this hobby. Keeping myself healthy with a good diet and regular exercise is another priority for me. To achieve this, I like to cook quality food with fresh ingredients, and I go running several times a week. To keep myself in shape nad the environment clean, I take my racing bike to reach places whenever possible.
+}
+    
 \end{document}
