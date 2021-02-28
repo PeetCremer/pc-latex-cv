@@ -118,6 +118,10 @@
 \definecolor{awesome-emerald}{HTML}{00A388}
 \definecolor{awesome-skyblue}{HTML}{0395DE}
 \definecolor{awesome-red}{HTML}{DC3522}
+\definecolor{awesome-katzi}{HTML}{A70417}
+\definecolor{awesome-katzi2}{HTML}{C10017}
+\definecolor{awesome-katzi3}{HTML}{DB0E27}
+
 \definecolor{awesome-pink}{HTML}{EF4089}
 \definecolor{awesome-orange}{HTML}{FF6138}
 \definecolor{awesome-nephritis}{HTML}{27AE60}
@@ -231,13 +235,20 @@
             }{}
             % print the header text
                 \begin{minipage}[t][\dimexpr \infoheight]{\linewidth}
-                    \begin{minipage}[t]{0.70\linewidth}
+                    \begin{minipage}[t]{0.80\linewidth}
                         {\Huge\color{headerfontcolor}\bfseries \@firstname \space \@lastname}
                     \end{minipage}
-                    \begin{minipage}[t]{0.25\linewidth}
-                        {\normalsize\color{headerfontcolor} \textsuperscript{\ast}\@birthday }
+                    \begin{minipage}[t]{0.15\linewidth}
+                        {\large\color{headerfontcolor} \makebox(20,17)[rb]{\textcolor{accent}{\textsuperscript{\ast}} \@birthday} }
                     \end{minipage}
                     \par\vspace{0.4em}
+                    %\begin{minipage}[t]{0.55\linewidth}
+                    %    {\Huge\color{headerfontcolor}\bfseries \@firstname \space \@lastname}
+                    %\end{minipage}
+                    %\begin{minipage}[t]{0.50\linewidth}
+                    %    {\large\color{headerfontcolor} \makebox(20,17)[rb]{\textcolor{accent}{\textsuperscript{\ast}} \@birthday} }
+                    %\end{minipage}
+                    %\par\vspace{0.4em}
                     
                     {\large\color{headerfontcolor}\addressfield{\@address}\hspace{0.15cm} | \hspace{0.15cm}\phonefield{\@phone}\par}\vspace{0.2em}
 
@@ -334,8 +345,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newlength{\skilllistnamelength}
 \newlength{\skilllisttaglength}
-\setlength{\skilllistnamelength}{0.3\textwidth}
-\setlength{\skilllisttaglength}{0.7\textwidth}
+\setlength{\skilllistnamelength}{0.30\textwidth}
+\setlength{\skilllisttaglength}{0.70\textwidth}
 \newcommand{\skilllist}[2]{
     \begin{minipage}[t]{\skilllistnamelength}% minipage for left column with date/place
         \raggedleft
@@ -350,6 +361,30 @@
     \par
     \vspace{0.2em}
 }
+
+% hobbylist
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newlength{\hobbylistnamelength}
+\newlength{\hobbylisttextlength}
+\setlength{\hobbylistnamelength}{0.10\textwidth}
+\setlength{\hobbylisttextlength}{0.90\textwidth}
+\newcommand{\hobbylist}[2]{
+    \begin{minipage}[t]{\hobbylistnamelength}% minipage for left column with date/place
+        \raggedleft
+        \textcolor{accent}{#1}
+    \end{minipage}%
+    %
+    \hspace{0.5em}
+    %
+    \begin{minipage}[t]{\dimexpr\hobbylisttextlength-0.5em}% minipage for position
+        #2
+    \end{minipage}%
+    \par
+    \vspace{0.2em}
+}
+
+
+
 
 
 % skill with 5 dot bar chart
