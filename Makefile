@@ -1,8 +1,8 @@
-CV: CV_en.pdf
+CV: CV_PeetCremer_en.pdf
 
-CV_en.pdf: CV_en.tex my-resume.cls
-	lualatex CV_en.tex
-	lualatex CV_en.tex
+CV_PeetCremer_en.pdf: CV_PeetCremer_en.tex my-resume.cls
+	lualatex CV_PeetCremer_en.tex
+	lualatex CV_PeetCremer_en.tex
 
 clean:
 	rm -f *.pdf || true
