@@ -7,7 +7,7 @@ Feel free to take this template and further adapt it to **your** needs ;-)
 Just clone and use `make` (you need to have GNU make installed) to build the .pdf file. Since the fonts used require lualatex, you need to have that one installed as well. Depending on your LaTeX distribution, you also might need to install some additional LaTeX packages. By running `make` you can figure out what is missing. 
 
 ## License
-This template (and the template by Nico Krieger it is build upon) is published under the the CC 4.0 license. 
+This template (and the template by Nico Krieger it is build upon) is published under the the CreativeCommons BY 4.0 license. 
 Feel free to adapt it to your needs, as long as you acknowledge where you took the base version from. 
 
 ## Changing the template
