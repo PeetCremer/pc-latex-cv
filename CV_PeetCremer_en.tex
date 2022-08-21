@@ -59,9 +59,9 @@
 
 \firstname{Dr. Peet}\lastname{Cremer}
 
-\address{Weseler Str. 22, 40239 Düsseldorf, Germany}
+\address{Bjørnegårdsvingen 13, 1338 Sandvika, Norway}
 \birthday{27/01/1988}
-\phone{+49 151 64548894}
+\phone{+47 917 42 339}
 \email{peet.cremer@gmail.com}
 \linkedin{Peet Cremer}{https://www.linkedin.com/in/peet-cremer-5286601a6/}
 \github{@PeetCremer}{https://github.com/PeetCremer}
@@ -79,13 +79,22 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
 \makeheader
 
 \section[\faBriefcase]{Work experience}
+\job{Senior Machine Learning Engineer}
+	{COGNITE (Oslo, Norway)}
+	{08/2021 - present}
+    {\begin{itemize}[leftmargin=2em]
+        \item Implementing intelligent algorithms to find context in otherwise unstructured industrial data
+        \item Scaling and maintaining microservices to deploy those algorithms in an SaaS setting
+        \item Creating data infrastructure capabilities to build up an industrial knowledge graph
+    \end{itemize}}
+%
 \job{AI Lead Developer}
     {APTIV (Wuppertal, Germany)}
-    {12/2020 - present}
+    {12/2020 - 07/2021}
     {\begin{itemize}[leftmargin=2em]
         \item Planning and execution of Machine Learning and Data Infrastructure projects in the automotive industry
-        \item Establishment of new technologies and risk mitigation. Cross-functional role as a technical adviser in various projects
-        \item Design of technical pathways to AI solutions and their efficient implementation
+        \item Cross-functional role as a technical adviser in various project, mitigating risk on different fronts
+        \item Design of AI solutions for automotive perception tasks. Guiding the software and hardware integration into the test vehicle
         \item Participation at conferences to identify new developments in AI Research. Guidance of colleagues to integrate these new trends into the daily work
     \end{itemize}}
 %
@@ -95,7 +104,7 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
     {\begin{itemize}[leftmargin=2em]
         \item Development of infrastructure solutions for artifical intelligence in automotive applications 
         \item SCRUM Product Owner for a data warehouse solution to store automotive sensor data 
-        \item Setup of a microservice solution for automatizing AI workflows
+        \item Design and setup of a microservice solution to automate AI workflows
         \item Supervision of a Master Thesis on using GANs for automotive data style transfer
     \end{itemize}}
 
@@ -107,8 +116,8 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
     {
         \begin{itemize}[leftmargin=2em]
             \item Topic: Mesoscale modeling of magnetic elastomers and gels -- theory and simulations
-            \item Solutions of magneto-elastic coupling models using numerical simulations, the finite element method, as well as density functional theory
-            \item This work has resulted in 7 publications in recognized peer-reviewed journals (see \href{https://scholar.google.com/citations?hl=de&user=MnU8ZxwAAAAJ}{publication list})
+            \item Solving magneto-elastic coupling models using numerical simulations, the finite element method, and density functional theory
+            \item Resulted in 7 publications in recognized peer-reviewed journals (see \href{https://scholar.google.com/citations?hl=de&user=MnU8ZxwAAAAJ}{publication list})
         \end{itemize}
     }
 %
@@ -128,7 +137,7 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
     {2008 - 2012}
     {
         \begin{itemize}[leftmargin=2em]
-            \item \textbf{Gpa: 1.3}\cref{footnote1}. Minor: Mathematics
+            \item \textbf{Gpa: 1.2}\cref{footnote1}. Minor: Mathematics
             \item Bachelor thesis: "Orientational fields in Plastic Crystals" was published as a \href{https://epljournal.edpsciences.org/articles/epl/abs/2012/15/epl14756/epl14756.html}{journal article}.
         \end{itemize}
     }
@@ -136,16 +145,18 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
 
 \section[\faFlask]{Skills}
 \skilllist{Programming languages}{\tag{Python} \tag{C++} \tag{C} \tag{Rust} \tag{Typescript}}
-\skilllist{IT working knowledge}{\tag{git} \tag{Docker} \tag{Gitlab} \tag{VS Code} \tag{MongoDB} \tag{REST} \tag{bash} \tag{Linux (Ubuntu, Debian)} \tag{Node.js} \tag{MS Azure} \tag{Matlab} \tag{vim} \tag{\LaTeX} \tag{MS Office}}
+\skilllist{IT working knowledge}{\tag{git} \tag{Docker} \tag{Gitlab} \tag{VS Code} \tag{MongoDB} \tag{PostgreSQL} \tag{SQLalchemy} \tag{flask} \tag{Kubernetes} \tag{Grafana} \tag{REST} \tag{bash} \tag{Linux (Ubuntu, Debian)} \tag{Node.js} \tag{MS Azure} \tag{\LaTeX} \tag{MS Office}}
 \skilllist{Libraries and frameworks}{\tag{TensorFlow} \tag{PyTorch} \tag{scikit-learn} \tag{matplotlib} \tag{numpy} \tag{scipy} \tag{Qt} \tag{HDF5} \tag{pandas} \tag{OpenMP}}
+%
+\clearpage
+\pagestyle{empty}
+%
 \skilllist{Machine Learning Techniques}{\tag {SVMs} \tag{Gradient Boosting} \tag{Population Strategies} \tag{Decision Trees} \tag{CNNs}}
 \skilllist{Agile software development}{\tag{Scrum (Product Owner)} \tag{Kanban} \tag{Jira}}
-\skilllist{Languages}{German (native), English (full professional proficiency), \\ French (intermediate), Norwegian (basic)}
+\skilllist{Languages}{\tag{German (native)} \tag{English (C1)} \tag{Norwegian (B1 / B2)} \tag{French (A2)}}
 %\smallskip % additional skip because tag outlines use up space
 
 
-\clearpage
-\pagestyle{empty}
 
 \section[\faTrophy]{Achievements, honours, and awards}
 \achievement{Best Poster presentation at the 15\textsuperscript{th} German Ferrofluid Workshop in Rostock (2015).}
@@ -153,6 +164,32 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
 
 
 \section[\faGears]{IT and Data Science projects}
+\job{Data backend for industrial knowledge graph}
+	{COGNITE, Oslo, Norway}
+	{06/2022 - 08/2022}
+	{\begin{itemize}
+		\item Creating a backend to store symbols and process lines extracted from engineering diagrams in a industrial knowledge graph
+		\item Implemented in Python and Typescript and interfaces to COGNITE`s internal flexible data modeling service
+		\item Will enable advanced graph queries on the graph and thereby create completely new ways to interact with the industrial reality
+	\end{itemize}}
+%
+\job{Annotation API to store auxiliary label data on files}
+	{COGNITE, Oslo, Norway}
+	{08/2021 - 06/2022}
+	{\begin{itemize}
+		\item Implemented a REST API to store label information on files within COGNITE`s data warehouse
+		\item Went from design to fully productive usage with SLAs in less than a year
+		\item Implemented in Python on top of \textit{PostgreSQL} using \textit{SQLalchemy} and \textit{flask}. Flexible annotation type system enabled by \textit{pydantic}
+	\end{itemize}}
+%
+\job{Intelligent document scanning tool}
+	{COGNITE, Oslo, Norway}
+	{03/2021 - 06/2022}
+	{\begin{itemize}
+		\item Contributed to a document scannnig tool that detects relevant fields in scanned forms and automatically extracts their values, significantly reducing the human effort required
+		\item Using Azure OCR to detect text instances together with a line detection algorithm to extract tables and fields. Combined with hand-crafted rules to make the field extraction more robust
+	\end{itemize}}	
+%
 \job{Live execution of detection network in test vehicle}
     {APTIV, Wuppertal, Germany}
     {11/2020 - 12/2020}
@@ -212,6 +249,9 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
         \item Successfully demonstrated an anchor-based 3D object detection on automotive radar raw data using CNNs
     \end{itemize}}
 %
+\clearpage
+\pagestyle{empty}
+%
 \job{Automotive Recording Tool}
     {APTIV, Wuppertal, Germany}
     {07/2018 - 08/2018}
@@ -246,16 +286,13 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
         \item Given a CNN trained in TensorFlow, this generator creates optimized C++ code to execute that CNN on the target platform 
     \end{itemize}}
 
-\clearpage
-\pagestyle{empty}
-
 \section[\faBook]{Teaching}
 \job{Lecturer on \\ artificial intelligence in autonomous driving}
     {University of Wuppertal,\\ Germany}
     {10/2020 - present}
     {\begin{itemize}[leftmargin=2em]
         \item Lecture "Artificial Intelligence Based Sensor Signal Processing for Autonomous Driving" held in collaboration with colleagues from APTIV
-        \item Designed and held 3 lectures and corresponding exercises about the topics: Numerical Optimization in Data Science, Support Vector Machines, and Gradient Boosting
+        \item Prepared and held lectures and exercises about Numerical Optimization in Data Science, Support Vector Machines, and Gradient Boosting
     \end{itemize}}
 %
 \job{Master thesis supervision}
@@ -288,7 +325,7 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
 \section[\faMusic]{About Me}
 \hobbylist{Interests}{I am enthusiastic about tech and science related topics in general. To follow the recent developments in machine learning, I like to read papers on arXiv and from the ICLR conference and I follow \href{https://towardsdatascience.com/}{towardsdatascience} and the \href{https://www.reddit.com/r/MachineLearning/}{/r/MachineLearning} subreddit. To stay on top of new trends in software engineering and science topics in general, I regularly browse \href{https://news.ycombinator.com/}{Hacker News}}
 \vspace{0.5em}
-\hobbylist{Activities}{Sozializing with friends has always been important to me. I am an enthusiastic Pen \& Paper gamemaster since 19 years and often meet with friends to indulge together in this hobby. Keeping myself healthy with a good diet and regular exercise is another priority for me. To achieve this, I like to cook quality food with fresh ingredients, and I go running several times a week. To keep myself in shape and the environment clean, I take my racing bike to reach places whenever possible}
+\hobbylist{Activities}{Sozializing with friends has always been important to me. I am an enthusiastic Pen \& Paper gamemaster since 20 years and often meet with friends to indulge together in this hobby. Keeping myself healthy with a good diet and regular exercise is another priority for me. To achieve this, I like to cook quality food with fresh ingredients, and I go running several times a week. To keep myself in shape and the environment clean, I take my racing bike to reach places whenever possible}
 
 
     
