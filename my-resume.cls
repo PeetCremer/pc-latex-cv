@@ -548,6 +548,18 @@
     \vspace{1.0em}
 }
 
+\newcommand{\altpublication}[1]{%
+    \begin{minipage}[t]{3mm}%
+        \makebox[3mm][c]{\footnotesize \faBook}
+    \end{minipage}%
+    \hspace{0.5em}%
+    \begin{minipage}[t]{\dimexpr \textwidth-0.5em-3mm}%
+        {\normalsize #1\par}
+    \end{minipage}%
+    \par
+    \vspace{0.5em}
+}
+
 % achievement
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

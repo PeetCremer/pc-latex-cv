@@ -71,9 +71,9 @@
 %\ads{NASA/ADS publication list}{https://ui.adsabs.harvard.edu/search/fq=\%7B!type\%3Daqp\%20v\%3D\%24fq\_database\%7D&fq\_database=database\%3A\%20astronomy&p\_=0&q=pubdate\%3A\%5B2016-01\%20TO\%209999-12\%5D\%20author\%3A(\%22Krieger\%2C\%20Nico\%22)&sort=date\%20desc\%2C\%20bibcode\%20desc}
 
 
-\tagline{I am an AI Software Engineer and Data Scientist with a background in Statistical Physics and Computer Science. 
-I combine a strong mathematical background with advanced programming skills (Python, C++, Rust) and knowledge of Data Science frameworks (TensorFlow, PyTorch, scikit-learn). 
-I have an outgoing, communicative personality, a hands-on attitude, and I am experienced in agile leadership of small teams.}
+\tagline{I am a Machine Learning Engineer with an academic background in Computational Physics and Material Science. 
+I combine strong analytical skills with advanced programming experience (Python, C++, Rust) and knowledge of Data Science frameworks. 
+I have an outgoing, communicative personality, a hands-on attitude, possess lots of curiosity, and I am experienced in agile leadership of small teams.}
 \photo[round]{picture4.jpg}{\dimexpr \headerheight-\marginbottom-1em}   % make photo exactly match the header with margintop/marginright/marginbottom as margin
 
 \makeheader
@@ -84,7 +84,7 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
 	{08/2021 - present}
     {\begin{itemize}[leftmargin=2em]
         \item Leading a cross-functional team of 4 other Software and Machine Learning Engineers
-        \item Implementing intelligent algorithms to find context in otherwise unstructured industrial data
+        \item Digitizing heavy industry by finding context in otherwise unstructured industrial data through intelligent algorithms
         \item Scaling and maintaining microservices to deploy those algorithms in an SaaS setting
         \item Creating data infrastructure capabilities to build up an industrial knowledge graph
     \end{itemize}}
@@ -154,7 +154,7 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
 %
 \skilllist{Machine Learning techniques}{\tag {SVMs} \tag{Gradient Boosting} \tag{Population Strategies} \tag{Decision Trees} \tag{CNNs}}
 \skilllist{Agile software development}{\tag{Scrum (Product Owner)} \tag{Kanban} \tag{Jira}}
-\skilllist{Languages}{\tag{German (native)} \tag{English (C1)} \tag{Norwegian (B1 / B2)} \tag{French (A2)}}
+\skilllist{Languages}{\tag{German (native)} \tag{English (C1)} \tag{Norwegian (B2)} \tag{French (A2)}}
 %\smallskip % additional skip because tag outlines use up space
 
 
@@ -163,12 +163,41 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
 \achievement{Best Poster presentation at the 15\textsuperscript{th} German Ferrofluid Workshop in Rostock (2015).}
 \achievement{DAAD scholarship ''RISE in North America`` for a three month research internship at Yale University, CT (2010)}
 
+\section[\faBook]{Selected publications}
+\altpublication{\textbf{P. Cremer}, H. Löwen, A. M. Menzel, \href{https://aip.scitation.org/doi/abs/10.1063/1.4934698}{"Tailoring superelasticity of soft magnetic materials"}, Appl. Phys. Lett. 107, 171903 (2015)
+    \begin{itemize}
+        \item FEM simulations to measure the stress-strain behavior of a magnetic elastomer (rubber with embedded magnetic particles)
+        \item Discovered a "superelastic" stress-strain behavior, a phenomenon otherwise known from shape-memory alloys
+    \end{itemize}
+}
+%
+\altpublication{\textbf{P. Cremer} et al., \href{https://iopscience.iop.org/article/10.1088/1361-648X/aa73bd}{"A density functional approach to ferrogels"}, J. Phys.: Condens. Matter 29, 275102 (2017)
+    \begin{itemize}
+        \item Using a density functional theory formulation to describe how an ensemble of metallic particles behaves in an elastic matrix  
+        \item Comparing the solution of this formalism with the results of particle Monte Carlo simulations
+    \end{itemize}
+}
+%
+\altpublication{T. Gundermann, \textbf{P. Cremer}, H Löwen, A. M. Menzel, S. Odenbach, \newline \href{https://iopscience.iop.org/article/10.1088/1361-665X/aa5f96}{"Statistical analysis of magnetically soft particles in magnetorheological elastomers"}, Smart Mater. Struct. 26, 045012 (2017)
+    \begin{itemize}
+        \item Statistical analysis of the particle distributions measured with x-ray micro tomography in samples of iron powder embedded into an elastic silicone matrix.
+        \item Gaining insights about the microstructure and possible consequences on the magneto-mechanical properties of the material 
+    \end{itemize}
+}
+%
+\altpublication{\textbf{P. Cremer}, M. Marechal, H. Löwen, \href{https://iopscience.iop.org/article/10.1209/0295-5075/99/38005/meta}{"Director field in plastic crystals"}, Europhys. Lett. 99, 38005 (2012)
+    \begin{itemize}
+        \item This was my Bachelor Thesis. I performed particle Monte Carlo simulations of a system of anisotropic particles. 
+        \item Analyzed the formation of topological defects within the Wigner-Seitz and explained it with a simplified model.
+    \end{itemize}
+}
 
-\section[\faGears]{IT and Data Science projects}
+
+\section[\faGears]{Selected IT and Data Science projects}
 \job{Data backend to store an industrial knowledge graph}
 	{COGNITE, Oslo, Norway}
 	{06/2022 - 08/2022}
-	{\begin{itemize}
+    {\begin{itemize}[leftmargin=2em]
 		\item Creating a backend to store symbols and process lines extracted from engineering diagrams in an industrial knowledge graph
 		\item Implemented in Python and Typescript and interfaces to COGNITE`s internal flexible data modeling service
 		\item Allows for advanced graph queries on the knowledge graph and, thereby, enables advanced interactions with the industrial reality
@@ -177,7 +206,7 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
 \job{Annotation API to store auxiliary label data on files}
 	{COGNITE, Oslo, Norway}
 	{08/2021 - 06/2022}
-	{\begin{itemize}
+    {\begin{itemize}[leftmargin=2em]
 		\item Implemented a REST API to store label information on files within COGNITE`s data warehouse
 		\item Went from design to fully productive usage with SLAs in less than a year
 		\item Implemented in Python on top of \textit{PostgreSQL} using \textit{SQLalchemy} and \textit{flask}. Flexible annotation type system enabled by \textit{pydantic}
@@ -186,18 +215,10 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
 \job{Intelligent document scanning tool}
 	{COGNITE, Oslo, Norway}
 	{03/2021 - 06/2022}
-	{\begin{itemize}
+    {\begin{itemize}[leftmargin=2em]
 		\item Contributed to a document scannnig tool that detects relevant fields in scanned forms and automatically extracts their values, significantly reducing the human effort required
 		\item Using Azure OCR to detect text instances together with a line detection algorithm to extract tables and fields. Combined with hand-crafted rules to make the field extraction more robust
 	\end{itemize}}	
-%
-\job{Live execution of detection network in test vehicle}
-    {APTIV, Wuppertal, Germany}
-    {11/2020 - 12/2020}
-    {\begin{itemize}[leftmargin=2em]
-        \item Deployed a 3d bounding box detection network on Nvidia Jetson Xavier hardware 
-        \item Optimizations and tweaks to make an automotive detection network fast enough to run live in the test vehicle
-    \end{itemize}}
 %
 \job{Runtime environment for AI algorithms}
     {APTIV, Wuppertal, Germany}
@@ -250,9 +271,6 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
         \item Successfully demonstrated an anchor-based 3D object detection on automotive radar raw data using CNNs
     \end{itemize}}
 %
-\clearpage
-\pagestyle{empty}
-%
 \job{Automotive recording tool}
     {APTIV, Wuppertal, Germany}
     {07/2018 - 08/2018}
@@ -278,20 +296,12 @@ I have an outgoing, communicative personality, a hands-on attitude, and I am exp
         \item Simulated an automotive FMCW radar by creating a simple raytracer in Python.
         \item Used this raytracer to simulate artificical training data for neural networks 
     \end{itemize}}
-%
-\job{Automatic code generator for CNNs}
-    {APTIV, Wuppertal, Germany}
-    {07/2017 - 10/2017}
-    {\begin{itemize}[leftmargin=2em]
-        \item Implemented code generator in Matlab to deploy CNNs to a TI embedded chip
-        \item Given a CNN trained in TensorFlow, this generator creates optimized C++ code to execute that CNN on the target platform 
-    \end{itemize}}
 
-\section[\faBook]{Teaching}
+\section[\faUniversity]{Teaching}
 \job{Co-Organizer of the NorwAI 2022 hackathon}
 	{NTNU Trondheim,\\ Norway}
 	{08/2022 - 10/2022}
-	{\begin{itemize}
+    {\begin{itemize}[leftmargin=2em]
 		\item Organizing and conducting a Data Science hackathon in Trondheim with Cognite and researchers from NTNU
 		\item Finding a suitable dataset, defining a task, supervising the students during the event, and evaluating the contributions
 	\end{itemize}}
