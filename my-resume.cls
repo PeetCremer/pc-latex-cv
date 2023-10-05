@@ -75,7 +75,7 @@
 \newlength\marginbottom
 
 % default sizes, margins, ...
-\setlength\headerheight{5.3cm}
+\setlength\headerheight{5.6cm}
 \setlength\infoheight{2.5cm}
 \setlength\marginleft{1cm}
 \setlength\marginright{\marginleft}
