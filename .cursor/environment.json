@@ -1,0 +1,120 @@
+{
+  "$schema": "https://cursor.com/schemas/environment.schema.json",
+  "name": "LaTeX CV Environment",
+  "description": "Environment setup for building PDF CV from LaTeX source using lualatex",
+  "version": "1.0.0",
+  "requirements": {
+    "system": {
+      "os": ["linux", "ubuntu", "debian"],
+      "packages": {
+        "apt": [
+          "texlive-full",
+          "perl",
+          "curl",
+          "wget",
+          "fontconfig",
+          "ghostscript"
+        ]
+      }
+    },
+    "tools": [
+      {
+        "name": "lualatex",
+        "description": "LuaTeX LaTeX compiler",
+        "command": "lualatex",
+        "version": ">=1.18.0",
+        "required": true,
+        "installCommand": "sudo apt update && sudo apt install -y texlive-full"
+      },
+      {
+        "name": "latexmk",
+        "description": "LaTeX build automation tool", 
+        "command": "latexmk",
+        "required": true,
+        "installCommand": "sudo apt update && sudo apt install -y texlive-full"
+      },
+      {
+        "name": "make",
+        "description": "Build automation tool for running Makefile",
+        "command": "make",
+        "required": true,
+        "installCommand": "sudo apt update && sudo apt install -y build-essential"
+      }
+    ]
+  },
+  "environment": {
+    "variables": {
+      "PATH": "/usr/local/texlive/2024/bin/x86_64-linux:$PATH",
+      "MANPATH": "/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH",
+      "INFOPATH": "/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH"
+    }
+  },
+  "setup": {
+    "commands": [
+      {
+        "name": "Update package index",
+        "command": "sudo apt update",
+        "description": "Update the package repository index"
+      },
+      {
+        "name": "Install TeX Live Full",
+        "command": "sudo apt install -y texlive-full",
+        "description": "Install complete TeX Live distribution with lualatex support"
+      },
+      {
+        "name": "Verify lualatex installation",
+        "command": "which lualatex",
+        "description": "Verify that lualatex is available in PATH"
+      },
+      {
+        "name": "Build CV PDF",
+        "command": "make",
+        "description": "Build the CV PDF using the provided Makefile"
+      }
+    ]
+  },
+  "validation": {
+    "commands": [
+      {
+        "name": "Check lualatex version",
+        "command": "lualatex --version",
+        "expectedOutput": "LuaHBTeX"
+      },
+      {
+        "name": "Check latexmk availability",
+        "command": "which latexmk",
+        "expectedOutput": "/usr/bin/latexmk"
+      },
+      {
+        "name": "Verify CV builds successfully",
+        "command": "make clean && make",
+        "description": "Clean build the CV to ensure all dependencies are working"
+      }
+    ]
+  },
+  "project": {
+    "type": "latex",
+    "mainFile": "CV_PeetCremer_en.tex",
+    "buildSystem": "make",
+    "compiler": "lualatex",
+    "outputFormat": "pdf",
+    "dependencies": [
+      "my-resume.cls",
+      "newpic.jpg",
+      "newpic3.jpg", 
+      "picture4.jpg"
+    ]
+  },
+  "buildCommands": {
+    "build": "make",
+    "clean": "make clean",
+    "rebuild": "make clean && make"
+  },
+  "notes": [
+    "This environment uses texlive-full which provides comprehensive LaTeX support including lualatex",
+    "The CV uses a custom document class (my-resume.cls) and includes image files",
+    "Build output is CV_PeetCremer_en.pdf generated from CV_PeetCremer_en.tex",
+    "The Makefile uses lualatex with specific options for proper compilation",
+    "Installation size is approximately 4-6GB for texlive-full package"
+  ]
+}
