@@ -1,0 +1,168 @@
+---
+alwaysApply: true
+---
+
+# CV Project Guide for AI Agents
+
+## Project Objective
+
+This is a **LaTeX-based CV/Resume project** for Peet Cremer. The primary goals are:
+
+- **Maintain an up-to-date professional CV** in LaTeX format
+- **Automate PDF generation** with high-quality typesetting using LuaTeX
+- **Track changes visually** using latexdiff for easy review
+- **Ensure reproducible builds** across different environments
+
+## Project Structure
+
+```
+├── CV_PeetCremer_en.tex      # Main CV source file
+├── my-resume.cls             # Custom LaTeX class for styling
+├── Makefile                  # Build automation
+├── newpic3.jpg               # Profile picture
+└── .cursor/rules/agents.mdc  # Project guidelines (this file)
+```
+
+## Make Commands Reference
+
+### Core Build Commands
+
+#### `make` or `make CV`
+- **Purpose**: Builds the main CV PDF
+- **Output**: `CV_PeetCremer_en.pdf`
+- **Process**: Runs LuaLaTeX twice for proper cross-references
+- **When to use**: After any content changes to generate updated PDF
+
+#### `make clean`
+- **Purpose**: Removes all generated files for fresh build
+- **Removes**: `*.pdf`, `*.aux`, `*.log`, `*.out` files
+- **When to use**: When experiencing build issues or starting fresh
+
+### Diff Generation Commands
+
+#### `make diff`
+- **Purpose**: Creates visual diff PDF showing changes from main branch
+- **Output**: `CV_PeetCremer_en_diff.pdf`
+- **Process**: 
+  1. Extracts original CV from `main` branch
+  2. Uses `latexdiff --type=UNDERLINE` to create diff document
+  3. Compiles to PDF with visual change indicators
+- **When to use**: Before creating PRs to visualize all changes
+
+#### `make clean-diff`
+- **Purpose**: Removes diff-related files
+- **Removes**: `CV_PeetCremer_en_diff.pdf` and temporary diff files
+- **When to use**: To clean up after diff generation
+
+## Pull Request Workflow
+
+### ⚠️ CRITICAL REQUIREMENT: Always Include Both PDFs
+
+When creating a Pull Request, you **MUST** include both:
+
+1. **Main CV PDF** (`CV_PeetCremer_en.pdf`) - The updated CV
+2. **Diff PDF** (`CV_PeetCremer_en_diff.pdf`) - Visual changes from main branch
+
+### Step-by-Step PR Creation Process
+
+1. **Make your CV content changes** in `CV_PeetCremer_en.tex`
+
+2. **Test the build environment**:
+   ```bash
+   make clean
+   make
+   ```
+
+3. **Generate both required PDFs**:
+   ```bash
+   make diff  # This also ensures main PDF is up-to-date
+   ```
+
+4. **Verify both files exist**:
+   ```bash
+   ls -la *.pdf
+   # Should show both CV_PeetCremer_en.pdf and CV_PeetCremer_en_diff.pdf
+   ```
+
+5. **Commit all changes including both PDFs**:
+   ```bash
+   git add .
+   git commit -m "Update CV: [description]
+   
+   - [list key changes]
+   - [additional context]
+   
+   Files updated:
+   - CV_PeetCremer_en.pdf (updated CV)
+   - CV_PeetCremer_en_diff.pdf (visual diff)"
+   ```
+
+6. **Create PR with descriptive title and body**
+
+### Why Both PDFs Are Required
+
+- **Main PDF**: Shows the final result for immediate review
+- **Diff PDF**: Allows reviewer to quickly see what changed without manual comparison
+- **Quality Assurance**: Ensures build process works correctly
+- **Version Control**: Provides clear history of changes over time
+
+## Content Update Guidelines
+
+### When Making CV Changes
+
+- **Test incrementally**: Build and test after each significant change
+- **Use semantic commits**: Clearly describe what type of change was made
+- **Verify formatting**: Check that LaTeX compilation produces clean output
+- **Review diffs**: Always generate and review the diff PDF before submitting
+
+### Common Operations
+
+#### Adding New Position
+1. Add new `\job{...}` block in appropriate section
+2. Update previous position end dates if needed
+3. Test build: `make clean && make`
+4. Generate diff: `make diff`
+
+#### Updating Project List
+1. Add/remove/modify project entries
+2. Keep most relevant and recent projects
+3. Ensure consistent formatting
+4. Test and generate diff
+
+#### Modifying Styling
+1. Changes typically go in `my-resume.cls`
+2. Test thoroughly as styling affects entire document
+3. Always generate diff to see visual impact
+
+## Troubleshooting
+
+### Build Failures
+- Run `make clean` and try again
+- Check LaTeX syntax in `.tex` files
+- Ensure all required packages are available
+
+### Diff Generation Issues
+- Verify git repository state (committed changes)
+- Check that `main` branch exists and has CV file
+- Try `make clean-diff && make diff`
+
+### Large Diff Files
+- Diff PDFs can be larger due to change markup
+- This is normal and expected
+- Include in PR anyway for review purposes
+
+## Best Practices for AI Agents
+
+1. **Always test builds** before submitting changes
+2. **Generate diffs for all content changes** to visualize impact
+3. **Include both PDFs in every PR** - this is non-negotiable
+4. **Make incremental changes** and test frequently
+5. **Use descriptive commit messages** explaining what changed and why
+6. **Clean up temporary files** but preserve the two main PDFs for PR
+
+## Environment Notes
+
+- Uses **LuaHBTeX** (TeX Live 2025) for compilation
+- Custom class `my-resume.cls` provides styling
+- Profile image `newpic3.jpg` is embedded in CV
+- Build process handles font loading and package dependencies automatically
