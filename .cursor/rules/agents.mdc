@@ -1,3 +1,7 @@
+---
+alwaysApply: true
+---
+
 # CV Project Guide for AI Agents
 
 ## Project Objective
@@ -12,11 +16,11 @@ This is a **LaTeX-based CV/Resume project** for Peet Cremer. The primary goals a
 ## Project Structure
 
 ```
-├── CV_PeetCremer_en.tex     # Main CV source file
-├── my-resume.cls            # Custom LaTeX class for styling
-├── Makefile                 # Build automation
-├── newpic3.jpg             # Profile picture
-└── .cursor/rules/          # Project guidelines (this file)
+├── CV_PeetCremer_en.tex      # Main CV source file
+├── my-resume.cls             # Custom LaTeX class for styling
+├── Makefile                  # Build automation
+├── newpic3.jpg               # Profile picture
+└── .cursor/rules/agents.mdc  # Project guidelines (this file)
 ```
 
 ## Make Commands Reference
