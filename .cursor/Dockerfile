@@ -1,1 +1,1 @@
-FROM reitzig/texlive-base-luatex:latest
+FROM texlive/texlive:latest-full
