@@ -1,8 +1,6 @@
 {
   "name": "LaTeX CV Environment",
-  "container": {
-    "build": {
-      "dockerfile": "./Dockerfile"
-    }
+  "build": {
+    "dockerfile": "./Dockerfile"
   }
 }
