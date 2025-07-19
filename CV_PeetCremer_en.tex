@@ -79,9 +79,22 @@ I have an outgoing personality, build trust through honesty, employ strategic th
 \makeheader
 
 \section[\faBriefcase]{Work experience}
+\job{Principal Engineer - Atlas AI}
+	{COGNITE (Oslo, Norway)}
+	{02/2025 - today}
+    {
+        Leading technical initiatives in Cognite's Atlas AI platform development:
+        \begin{itemize}[leftmargin=2em]
+            \item Creating evaluation frameworks for measuring performance of Cognite's AI systems and industrial agents
+            \item Leading identification and rollout of productivity-enhancing AI tools including Cursor, Claude Code, and Gemini Code Assist
+            \item Developing low-code AI agent builder capabilities enabling rapid deployment of context-augmented industrial AI agents
+            \item Implementing language model benchmarking frameworks specifically designed for industrial use cases
+        \end{itemize}
+    }
+%
 \job{Director of Engineering}
 	{COGNITE (Oslo, Norway)}
-	{02/2023 - today}
+	{02/2023 - 02/2025}
     {
         Engineering manager of 18 developers in 3 teams, focusing on:
         \begin{itemize}[leftmargin=2em]
@@ -180,130 +193,83 @@ I have an outgoing personality, build trust through honesty, employ strategic th
 	{COGNITE, Oslo, Norway}
 	{04/2023 - 08/2023}
     {\begin{itemize}[leftmargin=2em]
-		\item Vector similarity lookup service build on top of the \href{https://weaviate.io/}{Weaviate} vector database
-		\item Enables to retrieve relevant context for LLM queries to enable an industrial chatbot and code completion experience
+		\item Vector similarity lookup service built on \href{https://weaviate.io/}{Weaviate} to enable industrial chatbot and code completion
 	\end{itemize}}
 %
-\job{Data backend to store an industrial knowledge graph}
+\job{Data backend for industrial knowledge graph}
 	{COGNITE, Oslo, Norway}
 	{06/2022 - 08/2022}
     {\begin{itemize}[leftmargin=2em]
-		\item Creating a backend to store symbols and process lines extracted from engineering diagrams in an industrial knowledge graph
-		\item Implemented in Python and Typescript and interfaces to COGNITE`s internal flexible data modeling service
-		\item Allows for advanced graph queries on the knowledge graph and, thereby, enables advanced interactions with the industrial reality
+		\item Backend to store symbols and process lines from engineering diagrams in an industrial knowledge graph
+		\item Implemented in Python/TypeScript, enables advanced graph queries for industrial data interactions
 	\end{itemize}}
 %
-\job{Annotation API to store auxiliary label data on files}
+\job{Annotation API for auxiliary label data}
 	{COGNITE, Oslo, Norway}
 	{08/2021 - 06/2022}
     {\begin{itemize}[leftmargin=2em]
-		\item Implemented a REST API to store label information on files within COGNITE`s data warehouse
-		\item Went from design to fully productive usage with SLAs in less than a year
-		\item Implemented in Python on top of \textit{PostgreSQL} using \textit{SQLalchemy} and \textit{flask}. Flexible annotation type system enabled by \textit{pydantic}
+		\item REST API for storing label information on files within COGNITE's data warehouse
+		\item Implemented in Python with PostgreSQL, achieved production deployment with SLAs in under a year
 	\end{itemize}}
 %
 \job{Intelligent document scanning tool}
 	{COGNITE, Oslo, Norway}
 	{03/2021 - 06/2022}
     {\begin{itemize}[leftmargin=2em]
-		\item Contributed to a document scannnig tool that detects relevant fields in scanned forms and automatically extracts their values, significantly reducing the human effort required
-		\item Using Azure OCR to detect text instances together with a line detection algorithm to extract tables and fields. Combined with hand-crafted rules to make the field extraction more robust
+		\item Document scanning tool using Azure OCR and line detection algorithms to extract fields from scanned forms
+		\item Significantly reduced manual effort required for document processing
 	\end{itemize}}	
 %
 \job{Live execution of detection network in test vehicle}
     {APTIV, Wuppertal, Germany}
     {11/2020 - 12/2020}
     {\begin{itemize}[leftmargin=2em]
-        \item Deployed a 3d bounding box detection network on Nvidia Jetson Xavier hardware 
-        \item Optimizations and tweaks to make an automotive detection network fast enough to run live in the test vehicle
+        \item Deployed 3D bounding box detection network on Nvidia Jetson Xavier hardware for live test vehicle execution
     \end{itemize}}
 %
 \job{Runtime environment for AI algorithms}
     {APTIV, Wuppertal, Germany}
     {06/2020 - 10/2020}
     {\begin{itemize}[leftmargin=2em]
-        \item Runtime environment written in Rust for live execution of AI algorithms in test vehicles for demo purposes
-        \item Main contributions: Preprocessing from the raw sensor data into the TensorFlow network input, subsequent postprocessing of the network results into bounding boxes for visualization, as well as abstractions to allow for different combinations of sensors and networks
-    \end{itemize}}
-%
- \job{Tooling for neural network training}
-    {APTIV, Wuppertal, Germany}
-    {02/2020 - 03/2020}
-    {\begin{itemize}[leftmargin=2em]
-        \item Python / Rust tooling to download sensor data and ground truth from a data warehouse and refine it for neural network training
-        \item Sophisticated interpolation algorithm for 3d bounding boxes to arbitrary timestamps
-        \item Using HDF5 as final data exchange format
+        \item Runtime environment written in Rust for live execution of AI algorithms in test vehicles
+        \item Implemented preprocessing, postprocessing, and abstractions for different sensor/network combinations
     \end{itemize}}
 %
 \job{Machine Learning automation using microservices}
     {APTIV, Wuppertal, Germany}
     {03/2020 - 05/2020}
     {\begin{itemize}[leftmargin=2em]
-        \item Established a Python microservice framework for the automatic execution of Machine Learning algorithms
-        \item Automatic triggering of execution pipelines on trigger events, such as the availability of new data
+        \item Python microservice framework for automatic execution of ML algorithms with trigger-based pipelines
     \end{itemize}}
 %
-\job{Deploying a facial expression detection system}
+\job{Affectiva collaboration - Facial expression detection}
     {Affectiva, Boston, MA}
     {08/2019}
     {\begin{itemize}[leftmargin=2em]
-        \item Short-noticed support of cooperation partner Affectiva in Boston to mitigate risk in a customer project
-        \item Made key contributions for deploying a facial expression detection system using TensorFlow and TF-Lite
+        \item Emergency support for deploying facial expression detection system using TensorFlow and TF-Lite
     \end{itemize}}
 %
-\job{Product Owner for a data warehouse project}
+\job{Product Owner for automotive data warehouse}
     {APTIV, Wuppertal, Germany}
     {02/2019 - 02/2020}
     {\begin{itemize}[leftmargin=2em]
-        \item Lead of a SCRUM team of 5 developers to establish a data warehouse for automotive sensor data and algorithm results
-        \item Access to automotive driving scenarios for the development of AI-based driver assistance systems
-        \item Based on MEAN stack, hosted in Azure using BlobStorage for larger binary data. Orchestrated using docker-compose
-        \item Featuring a REST API, a Python access client, a frontend with a video playback tool, and full backend test coverage
+        \item Led SCRUM team of 5 developers to establish data warehouse for automotive sensor data
+        \item MEAN stack solution with REST API, Python client, and video playback frontend hosted in Azure
     \end{itemize}}
 %
-\job{3D object detection on automotive radar data}
+\job{3D object detection on automotive radar}
     {APTIV, Wuppertal, Germany}
     {12/2018 - 01/2019}
     {\begin{itemize}[leftmargin=2em]
-        \item Lead a team of 5 engineers for a Deep Learning proof of concept
-        \item Successfully demonstrated an anchor-based 3D object detection on automotive radar raw data using CNNs
-    \end{itemize}}
-%
-\clearpage
-\pagestyle{empty}
-%
-\job{Automotive recording tool}
-    {APTIV, Wuppertal, Germany}
-    {07/2018 - 08/2018}
-    {\begin{itemize}[leftmargin=2em]
-        \item Development of a tool using C++ and Qt for the recording of sensor data in a test vehicle.
-        \item Recording of LiDAR (via UDP), Vehicle host bus and radar detections (via CAN), and radar debug information (via UDP)
-        \item Emphasis on correct timestamping of recorded sensor data, such that it can be replayed after recording 
+        \item Led team of 5 engineers for CNN-based 3D object detection proof of concept on automotive radar data
     \end{itemize}}
 %
 \job{LiDAR labeling tool}
     {APTIV, Wuppertal, Germany}
     {01/2018 - 12/2018}
     {\begin{itemize}[leftmargin=2em]
-        \item Work on a web-based labeling tool for 3D bounding boxes in LiDAR point clouds using TypeScript
-        \item Backend development using MEAN stack (MongoDB, Express, Angular, Node.js)
-        \item Main contributions: User and group management and data upload
-    \end{itemize}}
-%
-\job{Simple raytracer to simulate FMCW Radars}
-    {APTIV, Wuppertal, Germany}
-    {11/2017 - 12/2017}
-    {\begin{itemize}[leftmargin=2em]
-        \item Simulated an automotive FMCW radar by creating a simple raytracer in Python.
-        \item Used this raytracer to simulate artificical training data for neural networks 
-    \end{itemize}}
-%
-\job{Automatic code generator for CNNs}
-    {APTIV, Wuppertal, Germany}
-    {07/2017 - 10/2017}
-    {\begin{itemize}[leftmargin=2em]
-        \item Implemented code generator in Matlab to deploy CNNs to a TI embedded chip
-        \item Given a CNN trained in TensorFlow, this generator creates optimized C++ code to execute that CNN on the target platform 
+        \item Web-based 3D bounding box labeling tool for LiDAR point clouds using TypeScript and MEAN stack
+        \item Contributed user management, group management, and data upload features
     \end{itemize}}
 
 \section[\faBook]{Teaching}
