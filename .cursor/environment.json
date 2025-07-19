@@ -1,5 +1,4 @@
 {
-  "snapshot": "POPULATED_FROM_SETTINGS",
   "name": "LaTeX CV Environment",
   "install": "sudo apt update && sudo apt install -y texlive-full",
   "terminals": []
