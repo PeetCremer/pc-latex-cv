@@ -10,7 +10,8 @@ diff: CV_PeetCremer_en_diff.pdf
 
 CV_PeetCremer_en_diff.pdf: CV_PeetCremer_en.tex
 	@echo "Creating diff PDF..."
-	@git show main:CV_PeetCremer_en.tex > CV_PeetCremer_en_original.tex
+	@git fetch origin
+	@git show origin/main:CV_PeetCremer_en.tex > CV_PeetCremer_en_original.tex
 	@latexdiff --type=UNDERLINE CV_PeetCremer_en_original.tex CV_PeetCremer_en.tex > CV_PeetCremer_en_diff.tex
 	@lualatex -interaction=nonstopmode CV_PeetCremer_en_diff.tex > /dev/null 2>&1 || true
 	@lualatex -interaction=nonstopmode CV_PeetCremer_en_diff.tex > /dev/null 2>&1 || true
