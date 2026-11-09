@@ -71,61 +71,89 @@
 %\ads{NASA/ADS publication list}{https://ui.adsabs.harvard.edu/search/fq=\%7B!type\%3Daqp\%20v\%3D\%24fq\_database\%7D&fq\_database=database\%3A\%20astronomy&p\_=0&q=pubdate\%3A\%5B2016-01\%20TO\%209999-12\%5D\%20author\%3A(\%22Krieger\%2C\%20Nico\%22)&sort=date\%20desc\%2C\%20bibcode\%20desc}
 
 
-\tagline{AI Technical Leader with deep expertise in machine learning theory and enterprise AI strategy. Combines strong analytical foundation with proven experience managing engineering teams (up to 15 developers) and architecting production AI systems.\\ Currently leading enterprise adoption of cutting-edge AI development tools across 100+ engineers while staying deeply hands-on in technical development.}
+\tagline{Senior Principal AI Researcher building time series foundation models for industrial applications. Built an AI research lab from zero, combining hands-on model development with research direction and team leadership.\\ Ph.D. physicist with a track record of turning applied ML research into production systems and advancing an AI-first, agent-enhanced development lifecycle.}
 \photo[round]{newpic3.jpg}{\dimexpr \headerheight-\marginbottom-1em}   % make photo exactly match the header with margintop/marginright/marginbottom as margin
 
 \makeheader
 
-\section[\faTrophy]{Key Technical Achievements}
-\achievement{Led enterprise adoption of advanced AI development tools (Cursor, Gemini Code Assist) across 100+ developers with reported significant productivity gains}
-        \achievement{Pioneered application of computer vision algorithms to automotive perception systems, resulting in 10 patents covering training of radar perception algorithms, data storage, and fleet management}
-\achievement{Managed up to 15 developers across multiple teams while maintaining only 2 customer-impacting incidents over 1 year}
-\achievement{Architected production ML systems for building industrial knowledge graphs within an enterprise-scale data platform}
-\achievement{7 peer-reviewed publications in Statistical Physics demonstrating strong research and analytical capabilities}
+\section[\faTrophy]{Research \& Technical Achievements}
+\achievement{Built Cognite's time series AI research lab from zero and led a team of four to develop a state-of-the-art industrial time series foundation model in six months (April--September 2026); benchmarks reported at \href{https://onepetro.org/SPEADIP/proceedings-abstract/26ADIP/26ADIP/D021S045R003/810160}{ADIPEC 2026}}
+\achievement{Co-authored IND-Eval, an industrial time series benchmark paper accepted at a NeurIPS 2026 workshop, and a paper published at ADIPEC 2026}
+\achievement{Received Cognite's 2026 \href{https://www.linkedin.com/feed/update/urn:li:ugcPost:7473392370794004480/}{``Master of Agents'' Innovation Award} for leading adoption of agentic AI development tools across 100+ engineers}
+\achievement{Inventor on 5 patent applications filed with Cognite and 10 automotive patents from Aptiv; received Cognite's 2026 Inventor's Badge}
 
 \section[\faBriefcase]{Work Experience}
+\job{Senior Principal AI Researcher}
+    {COGNITE (Oslo, Norway)}
+    {10/2026 - present}
+    {
+        Lead Cognite's industrial time series foundation model research, setting research priorities and advancing model performance on benchmarks and industrial use cases.
+    }
+\job{Principal AI Researcher}
+    {COGNITE (Oslo, Norway)}
+    {01/2026 - 09/2026}
+    {
+        Established the research lab, from training compute to experimental workflows. Combined hands-on research with leadership of a four-person team to build a state-of-the-art industrial time series foundation model in six months (April--September 2026), using an agent-enhanced software development lifecycle to accelerate iteration.
+    }
+{\small
+\textbf{Selected contributions across both research roles (2026)}
+\begin{itemize}[leftmargin=2em]
+    \item \textbf{Synthetic Data}: Implemented synthetic time series generators based on coupled harmonic oscillators for foundation model research
+    \item \textbf{Flow Matching}: Defined the research direction and personally designed and evaluated approaches to applying flow matching in time series foundation models
+    \item \textbf{Evaluation}: Integrated GIFT-Eval as the primary forecasting benchmark suite; continue extending IND-Eval to evaluate performance on industrial data
+    \item \textbf{Training Performance}: Optimized training code through architectural changes, assessed GPU options for model training, and evaluated NorMuon as an alternative to AdamW
+    \item \textbf{Research Strategy}: Use literature review, competitor tracking, and controlled experiments to prioritize model improvements against benchmarks and industrial use cases
+    \item \textbf{Innovation Leadership}: Serve on Cognite's Patent \& Innovation Committee, vetting invention disclosures for novelty and strategic fit and contributing to patent filing decisions
+\end{itemize}
+\par}
+
+\section[\faBook]{Selected Research Publications}
+\textbf{\href{https://arxiv.org/abs/2610.16652}{IND-Eval: Aligning Evaluation and Simulation for Industrial Time Series Foundation Models}}\\
+{\small Vebjørn Haugland, Pavel Gulin, David Foss, \textbf{Peet Cremer}, Erlend Aune, Simone Casolo, Andreas Solbrå, Milad Mobarhan. 2026.\\
+Accepted at the \href{https://fmts-workshop.github.io/}{Foundation Models for Temporal Systems workshop, NeurIPS 2026}; presentation forthcoming, Sydney, December 2026. Industrial forecasting benchmark and study of evaluation-guided synthetic data generation.\par}
+\medskip
+\textbf{\href{https://onepetro.org/SPEADIP/proceedings-abstract/26ADIP/26ADIP/D021S045R003/810160}{Benchmarking Time Series Foundation Models for Oil and Gas Data Forecasting and Well Event Detection}}\\
+{\small Pavel Gulin, David Foss, Vebjørn Haugland, Erlend Aune, \textbf{Peet Cremer}, Simone Casolo.\\
+Published in the ADIPEC 2026 proceedings; paper available on OnePetro.\par}
+\medskip
+{\small Further publications in statistical physics and automotive AI: \href{https://scholar.google.com/citations?hl=de&user=MnU8ZxwAAAAJ}{full publication list}.\par}
+
+\clearpage
+\pagestyle{empty}
+\section[\faBriefcase]{Work Experience (continued)}
+
 \job{Principal Engineer -- Atlas AI}
 	{COGNITE (Oslo, Norway)}
-    {02/2025 - today}
+    {02/2025 - 12/2025}
     {
-        \textbf{Strategic Role Transition}: Moved from engineering management to hands-on technical leadership to drive AI innovation during this pivotal transformation period. Leading technical strategy for AI evaluation frameworks and enterprise AI adoption.
-
         \begin{itemize}[leftmargin=2em]
-            \item \textbf{Enterprise AI Strategy}: Architected organization-wide adoption of cutting-edge AI development tools (Cursor, Bolt, Claude Code, Gemini Code Assist, and Model Context Protocol servers), expanding usage across 100+ engineers with teams reporting weeks-to-days productivity improvements
-            \item \textbf{AI Evaluation Innovation}: Designing comprehensive evaluation frameworks for industrial AI agents and NLP tools interfacing with Cognite's data platform
-            \item \textbf{LLM Technical Leadership}: Led benchmarking of state-of-the-art models (Anthropic, OpenAI, Google, DeepSeek) for industrial knowledge graph applications, directly informing Atlas AI architecture decisions. Delivered external \href{https://www.cognite.com/en/resources/white-papers/atlas-ai-slm-llm-benchmark-report}{benchmark report} providing industry insights on LLM performance for industrial AI applications
-            \item \textbf{Cross-functional Collaboration}: Coordinated with Legal, Security, and Procurement teams to ensure compliance, risk mitigation, and successful tool rollouts. Managed end-to-end procurement processes and conducted training sessions to maximize adoption effectiveness
+            \item \textbf{Agent-Enhanced Development}: Led adoption of Cursor, Claude Code, Codex, and Model Context Protocol servers across 100+ engineers, with teams reporting weeks-to-days productivity improvements
+            \item \textbf{AI Evaluation}: Designed evaluation frameworks for industrial AI agents and NLP tools interfacing with Cognite's data platform
+            \item \textbf{LLM Evaluation}: Benchmarked models from Anthropic, OpenAI, Google, and DeepSeek for industrial knowledge graph applications, informing Atlas AI architecture decisions and publishing an external \href{https://www.cognite.com/en/resources/white-papers/atlas-ai-slm-llm-benchmark-report}{benchmark report}
+            \item \textbf{AI Tool Governance \& Rollout}: Partnered with Legal, Security, and Procurement to introduce agentic AI tools safely and compliantly, manage costs within budget, and train teams for effective adoption
         \end{itemize}
 
-        Recognized by CEO Girish Rishi in LinkedIn posts for \href{https://www.linkedin.com/posts/girish-rishi-4392587_peet-cremer-our-engineering-leader-showing-activity-7343289548442955776-Zu2p?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAmkPABVhPkjuk0vvCtiRSid_p7fC4zU_o}{AI tooling strategy leadership} and \href{https://www.linkedin.com/posts/girish-rishi-4392587_atlas-ai-is-all-about-enabling-our-customers-activity-7336752688279207936-f58Y?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAmkPABVhPkjuk0vvCtiRSid_p7fC4zU_o}{Atlas AI engineering innovation}.
     }
 %    
 \job{Senior Director of Engineering}
 	{COGNITE (Oslo, Norway)}
     {02/2024 - 02/2025}
     {
-        Strategic engineering leadership role combining organizational growth with AI initiative development. Gained executive perspective on enterprise AI transformation while maintaining technical involvement.
-
         \begin{itemize}[leftmargin=2em]
-            \item \textbf{Strategic Expansion}: Designed and executed hiring strategy for Cognite's India Center of Excellence, establishing staffing plans and engineering operations for 20+ roles. Contributed to successful \href{https://www.cognite.com/en/company/newsroom/cognite-inaugurates-india-center-of-excellence-in-bengaluru-with-commitment-to-leveraging-ai-for-industrial-growth}{inauguration of India Center of Excellence} supporting Cognite's global expansion strategy
-            \item \textbf{Engineering Leadership}: Managed 10-15 developers across data integration, connectivity, and AI initiatives during critical company scaling phase. Maintained only 2 customer-impacting incidents across those team's services over 1 year while scaling teams
-            \item \textbf{Product Strategy}: Collaborated on Contextualization services roadmap, aligning technical architecture with business objectives
+            \item \textbf{Hiring \& Expansion}: Designed and executed the hiring strategy for Cognite's \href{https://www.cognite.com/en/company/newsroom/cognite-inaugurates-india-center-of-excellence-in-bengaluru-with-commitment-to-leveraging-ai-for-industrial-growth}{India Center of Excellence}, establishing staffing plans and engineering operations for 20+ roles
+            \item \textbf{Engineering Management}: Managed 10--15 developers across data integration, connectivity, and AI initiatives
+            \item \textbf{Product Planning}: Contributed to the Contextualization services roadmap, aligning technical architecture with business objectives
         \end{itemize}
     }
-
-\clearpage
-\pagestyle{empty}
 
 %
 \job{Director of Engineering}
 	{COGNITE (Oslo, Norway)}
 	{02/2023 - 02/2024}
     {
-        Engineering management role focused on people leadership, technical planning, and team development. Stepped up to manage additional teams during organizational transitions when multiple Engineering Managers departed.
-
         \begin{itemize}[leftmargin=2em]
-            \item \textbf{Team Stabilization}: Absorbed responsibility for multiple teams during management transitions, scaling from 1 to 3 teams (up to 18 developers) while maintaining delivery commitments and service reliability
-            \item \textbf{Team Recovery}: Transformed inherited struggling team from red-yellow to yellow-green health metrics by enabling Cognite's support team to triage customer requests and creating documented guardrailed escalation processes, significantly reducing engineering team stress
+            \item \textbf{Team Leadership}: Expanded responsibility from 1 to 3 teams (up to 18 developers) during management transitions while maintaining delivery commitments and service reliability
+            \item \textbf{Team Development}: Enabled support teams to triage customer requests and introduced documented escalation processes, reducing interruptions and engineering team stress
             \item \textbf{Technical Leadership}: Led teams specializing in \href{https://www.cognite.com/en/contextualization}{contextualization of industrial data}, \href{https://www.cognite.com/en/industrial-canvas}{data-driven troubleshooting applications}, and \href{https://docs.cognite.com/cdf/integration/guides/contextualization/interactive_diagrams/}{parsing of engineering diagrams}
         \end{itemize}
     }
@@ -134,11 +162,10 @@
 	{COGNITE (Oslo, Norway)}
 	{08/2021 - 02/2023}
     {
-        Technical leadership role building production ML systems for building an industrial knowledge graph. Combined hands-on development with cross-functional team leadership.
         \begin{itemize}[leftmargin=2em]
-            \item Led cross-functional team of 5 software/ML engineers implementing intelligent algorithms
-            \item Architected and maintained microservices deploying ML algorithms in SaaS environment. Included a diagram parsing service, a named entity recognition service, and a service for annotation storage
-            \item Created data infrastructure capabilities enabling advanced graph queries and industrial reality interactions
+            \item Led 5 software/ML engineers building production ML services for Cognite's industrial knowledge graph
+            \item Architected and maintained microservices for diagram parsing, named entity recognition, and annotation storage in a SaaS environment
+            \item Built data infrastructure supporting queries over the industrial knowledge graph
         \end{itemize}
     }
 %
@@ -146,11 +173,10 @@
     {APTIV (Wuppertal, Germany)}
     {12/2020 - 07/2021}
     {
-        Technical innovation leadership in automotive AI applications. Combined deep ML expertise with practical deployment experience.
         \begin{itemize}[leftmargin=2em]
-            \item \textbf{Automotive AI Innovation}: Led breakthrough work applying vision-based perception algorithms to automotive radar, using LiDAR as reference sensor. Implemented the training dataset creation process, deploying a pointcloud autolabeling algorithm, and creating a robust data preprocessing and augmentation mechanism
+            \item \textbf{Radar Perception}: Applied vision-based perception algorithms to automotive radar using LiDAR as a reference sensor; implemented point-cloud autolabeling, training dataset creation, preprocessing, and augmentation
             \item Led planning and execution of ML and data infrastructure projects for automotive perception tasks
-            \item Contributed to significant innovation pipeline, resulting in 10 patents and 1 publication (see \href{https://scholar.google.com/citations?hl=de&user=MnU8ZxwAAAAJ}{publication list}) covering training of radar perception algorithms, automotive data storage, and fleet management systems
+            \item Contributed to 10 patents across the full Aptiv tenure (2017--2021), covering radar perception training, automotive data storage, and fleet management systems; also co-authored 1 publication (see \href{https://scholar.google.com/citations?hl=de&user=MnU8ZxwAAAAJ}{publication list})
         \end{itemize}
     }
 %
@@ -158,10 +184,9 @@
     {APTIV (Wuppertal, Germany)}
     {07/2017 - 12/2020}
     {
-        Built comprehensive data infrastructure and ML pipeline foundation for automotive sensor data, enabling advanced AI research and development capabilities.
         \begin{itemize}[leftmargin=2em]
             \item \textbf{Data Platform Engineering}: Built end-to-end data platform for automotive sensor data, including recording tools for vehicle sensors, storage infrastructure, labeling systems, and preprocessing workflows
-            \item \textbf{Microservices for ML Inference}: Established microservice architecture for automated inference processing, enriching incoming data with algorithm-generated insights as new sensor data is uploaded
+            \item \textbf{ML Inference Infrastructure}: Established microservices for automated inference, enriching incoming sensor data with model predictions
             \item \textbf{Technical Mentorship}: Supervised Master's thesis on GANs for automotive data style transfer
         \end{itemize}
     }
@@ -171,43 +196,46 @@
     {University of Düsseldorf}
     {2013 - 2017}
     {
-        \textbf{Strong Theoretical Foundation}: Deep understanding of statistical systems, numerical optimization, and mathematical modeling. Research background provides analytical rigor and quantitative problem-solving skills that transfer effectively to AI/ML leadership roles.
+        Research in statistical physics, numerical simulation, and mathematical modeling, providing a rigorous foundation for experimental design and AI research.
         \begin{itemize}[leftmargin=2em]
             \item Dissertation: Mesoscale modeling of magnetic elastomers and gels using finite element methods and density functional theory
-            \item 7 peer-reviewed publications (see \href{https://scholar.google.com/citations?hl=de&user=MnU8ZxwAAAAJ}{publication list}) demonstrating research depth and scientific communication skills
+            \item 7 peer-reviewed publications in statistical physics (see \href{https://scholar.google.com/citations?hl=de&user=MnU8ZxwAAAAJ}{publication list})
         \end{itemize}
     }
 %
-\job{M.Sc. Physics (GPA: 1.1/4.0\textsuperscript{1})}
+\job{M.Sc. Physics (German grade: 1.1\textsuperscript{1})}
     {University of Düsseldorf}
     {2012 - 2013}
     {
-        Focus: Soft Matter, Statistical Physics. Minor: Mathematics. Master thesis on "Emergent states in active systems" published in peer-reviewed journal, demonstrating early research impact and theoretical depth.
+        Focus: Soft Matter, Statistical Physics. Minor: Mathematics. Master's thesis on ``Emergent states in active systems'' published in a peer-reviewed journal.
     }
 %
-\job{B.Sc. Physics (GPA: 1.2/4.0\textsuperscript{1})}
+\job{B.Sc. Physics (German grade: 1.2\textsuperscript{1})}
     {University of Düsseldorf}
     {2008 - 2012}
     {
-        Minor: Mathematics. Strong foundation in mathematical modeling and computational physics. Bachelor thesis published as journal article, showing consistent research excellence from early career.
+        Minor: Mathematics. Foundation in mathematical modeling and computational physics. Bachelor's thesis published as a journal article.
     }
 %
 \job{Research Internship (DAAD RISE Scholarship)}
     {Yale University, USA}
     {07/2010 - 10/2010}
     {
-        Selected for \href{https://www.daad.de/rise/en/rise-worldwide/about-the-programm/}{DAAD RISE Worldwide scholarship} for research internship at Yale University. Conducted laboratory experiments on optical properties of butterfly wings and developed theoretical models for optical behavior, demonstrating early research capabilities and international experience.
+        Awarded a \href{https://www.daad.de/rise/en/rise-worldwide/about-the-programm/}{DAAD RISE Worldwide scholarship}. Conducted experiments on the optical properties of butterfly wings and developed theoretical models of their optical behavior.
     }
 
 \vspace{0.5em}
 \textit{\small \textsuperscript{1}German grading system: 1.0 (best) to 4.0 (worst)}
 
-\section[\faFlask]{Technical Skills \& Languages}
-\skilllist{Core Programming}{\tag{Python (Expert, 10+ yrs)} \tag{C++ (Expert, 10+ yrs)} \tag{Rust (Advanced, 2 yrs)} \tag{TypeScript (Advanced, 2 yrs)}}
-\skilllist{AI/ML Specialization}{\tag{PyTorch (2+ yrs)} \tag{TensorFlow (2+ yrs)} \tag{LangChain} \tag{RAG} \tag{Vector Databases} \tag{Support Vector Machines} \tag{Gradient Boosting} \tag{Model Evaluation} \tag{Model Context Protocol (MCP)}}
-\skilllist{Mathematical Foundation}{\tag{Statistical Analysis} \tag{Numerical Simulations} \tag{Mathematical Modeling} \tag{NumPy/SciPy (Expert)} \tag{Scikit-learn (2+ yrs)}}
-\skilllist{Engineering Leadership}{\tag{Technical Team Leadership} \tag{Strategic Hiring \& Talent Acquisition} \tag{Enterprise AI Strategy \& Implementation} \tag{AI Productivity Tooling Adoption} \tag{Cross-functional Collaboration} \tag{Operational Excellence} \tag{Production ML Systems}}
-\skilllist{Infrastructure \& Tools}{\tag{Docker} \tag{Kubernetes} \tag{PostgreSQL} \tag{MongoDB} \tag{Azure} \tag{GCP} \tag{FastAPI} \tag{Microservices} \tag{Linux} \tag{Cursor} \tag{Claude Code} \tag{Gemini Code Assist}}
+\clearpage
+
+\section[\faFlask]{Skills \& Languages}
+\skilllist{Programming}{\tag{Python} \tag{C++} \tag{Rust} \tag{TypeScript}}
+\skilllist{AI Research}{\tag{Time Series Foundation Models} \tag{Agentic AI} \tag{Transformers} \tag{Synthetic Data Generation} \tag{Flow Matching} \tag{Experimental Design} \tag{Model Evaluation \& Benchmarking}}
+\skilllist{ML Engineering}{\tag{PyTorch} \tag{TensorFlow} \tag{scikit-learn} \tag{RAG} \tag{Model Context Protocol (MCP)} \tag{Production ML Systems}}
+\skilllist{Scientific Computing}{\tag{Statistical Analysis} \tag{Numerical Simulation} \tag{Mathematical Modeling} \tag{NumPy/SciPy}}
+\skilllist{Leadership \& Management}{\tag{Engineering Management} \tag{AI Lab Leadership} \tag{Technical Hiring} \tag{Technical Mentoring} \tag{AI Adoption \& Governance}}
+\skilllist{Infrastructure \& Development}{\tag{Docker} \tag{Kubernetes} \tag{Azure} \tag{GCP} \tag{Linux} \tag{Agentic Software Development} \tag{Cursor} \tag{Claude Code} \tag{Codex}}
 \skilllist{Languages}{\tag{German (native)} \tag{English (C1)} \tag{Norwegian (B2)} \tag{French (A2)}}
 
 \section[\faBook]{Teaching \& Knowledge Sharing}
@@ -215,7 +243,7 @@
     {University of Wuppertal,\\ Germany}
     {10/2020 - 04/2021}
     {
-        Designed and delivered 3 comprehensive lectures with exercises: Numerical Optimization (SOTA ML optimizers like Adam \& Evolutionary Algorithms), Gradient Boosting, and Support Vector Machines. Demonstrates ability to distill complex ML theory into teachable concepts.
+        Designed and delivered three lectures with exercises on Numerical Optimization (Adam and evolutionary algorithms), Gradient Boosting, and Support Vector Machines.
     }
 %
 \job{Co-Organizer, NorwAI 2022 Hackathon}
@@ -225,9 +253,7 @@
         Led technical organization of Data Science hackathon, including dataset curation, task definition, student supervision, and contribution evaluation.
     }
 
-\section[\faGears]{Target Roles \& Keywords}
-\textbf{Seeking}: Staff Engineer, Principal Engineer, Technical Lead, AI Architect, Technical Director roles at technology companies with strong engineering culture. Open to hybrid remote positions in Norway or full remote opportunities.
-
-\textbf{Specializations}: AI Strategy, Machine Learning Architecture, Technical Leadership, Engineering Excellence, Enterprise AI Transformation, Industrial AI Applications, Team Scaling, Production ML Systems.
+\medskip
+{\small \textbf{Location \& Availability}: Based in Norway; open to hybrid roles in Norway and fully remote opportunities.\par}
 
 \end{document}
